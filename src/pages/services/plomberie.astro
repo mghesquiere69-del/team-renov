@@ -1,0 +1,67 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Tuyauterie cuivre & PER",
+  "Sanitaires",
+  "Chauffage",
+  "Dépannage urgent",
+];
+
+const relatedServices = [
+  { title: "Carrelage", href: "/services/carrelage" },
+  { title: "Électricité", href: "/services/electricite" },
+  { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Placo & Rails", href: "/services/placo-rails" },
+];
+---
+
+<ServicePageLayout
+  title="Plomberie"
+  metaTitle="Plomberie – Team Renov | Installation & Rénovation Sanitaires"
+  metaDescription="Installation et rénovation de plomberie : tuyauterie, sanitaires, chauffage. Plombiers qualifiés, devis gratuit en 48h."
+  category="Travaux Intérieurs"
+  categoryHref="/services#interieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Des installations fiables et durables" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          La plomberie est un élément vital de votre habitation. Nos plombiers qualifiés
+          interviennent sur l'ensemble de vos installations : alimentation en eau, évacuations,
+          sanitaires et chauffage.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Que ce soit pour une rénovation complète de salle de bain, le remplacement d'un
+          chauffe-eau ou la création d'un réseau d'alimentation pour votre nouvelle cuisine,
+          nous garantissons des installations conformes, étanches et pérennes.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo travaux plomberie
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations plomberie" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Tuyauterie", desc: "Installation et remplacement de canalisations en cuivre, PER ou multicouche." },
+        { title: "Sanitaires", desc: "Pose de WC, lavabos, baignoires, douches et robinetterie de qualité." },
+        { title: "Chauffe-eau", desc: "Installation et remplacement de chauffe-eau électriques, gaz ou thermodynamiques." },
+        { title: "Chauffage", desc: "Pose de radiateurs, planchers chauffants et raccordement de systèmes de chauffage." },
+        { title: "Évacuations", desc: "Création et réfection des réseaux d'évacuation d'eaux usées et eaux pluviales." },
+        { title: "Dépannage", desc: "Intervention rapide pour fuites, bouchons, pannes de chauffe-eau et urgences." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const projects = [
+  { title: "Rénovation cuisine ouverte", category: "Cuisine", location: "Paris 11e" },
+  { title: "Salle de bain contemporaine", category: "Salle de bain", location: "Neuilly-sur-Seine" },
+  { title: "Appartement haussmannien", category: "Rénovation complète", location: "Paris 8e" },
+  { title: "Terrasse carrelée", category: "Extérieur", location: "Vincennes" },
+  { title: "Studio complet", category: "Rénovation complète", location: "Paris 20e" },
+  { title: "Façade enduit projeté", category: "Extérieur", location: "Montreuil" },
+  { title: "Salle de bain PMR", category: "Salle de bain", location: "Créteil" },
+  { title: "Cuisine équipée", category: "Cuisine", location: "Boulogne-Billancourt" },
+  { title: "Loft industriel", category: "Rénovation complète", location: "Ivry-sur-Seine" },
+];
+---
+
+<BaseLayout
+  title="Nos Réalisations – Team Renov | Galerie de Projets"
+  description="Découvrez nos projets de rénovation en images : cuisines, salles de bain, rénovations complètes et travaux extérieurs."
+>
+  <section class="bg-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Nos Réalisations</h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto">
+        Chaque projet est unique. Découvrez quelques-unes de nos rénovations
+        récentes en Île-de-France.
+      </p>
+    </div>
+  </section>
+
+  <Section title="" bg="white">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-animate>
+      {projects.map((project) => (
+        <div class="group cursor-pointer">
+          <div class="relative aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-3">
+            <div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/30 transition-colors"></div>
+            <div class="absolute top-3 left-3">
+              <span class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-primary">
+                {project.category}
+              </span>
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold text-primary group-hover:text-accent transition-colors">{project.title}</h3>
+          <p class="text-sm text-gray-medium">{project.location}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <section class="bg-primary py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Votre projet pourrait être le prochain</h2>
+      <p class="text-white/80 mb-8">Contactez-nous pour discuter de votre rénovation.</p>
+      <a href="/contact" class="btn-primary">Demander un devis</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const guarantees = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>`,
+    title: "Certification RGE",
+    subtitle: "Reconnu Garant de l'Environnement",
+    description: "Notre certification RGE atteste de notre compétence en matière de travaux d'efficacité énergétique. Elle vous permet de bénéficier des aides financières de l'État (MaPrimeRénov', CEE, éco-PTZ) pour vos travaux de rénovation énergétique.",
+    benefits: [
+      "Accès aux aides MaPrimeRénov'",
+      "Éligibilité à l'éco-prêt à taux zéro",
+      "Certificats d'Économie d'Énergie (CEE)",
+      "TVA réduite à 5,5% sur les travaux éligibles",
+    ],
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>`,
+    title: "Assurance Décennale",
+    subtitle: "Protection pendant 10 ans",
+    description: "Tous nos travaux sont couverts par une assurance de responsabilité civile décennale. Cela signifie que pendant 10 ans après la réception des travaux, tout dommage compromettant la solidité de l'ouvrage ou le rendant impropre à sa destination est couvert.",
+    benefits: [
+      "Couverture des vices cachés pendant 10 ans",
+      "Protection de la solidité de votre ouvrage",
+      "Garantie d'étanchéité et d'isolation",
+      "Prise en charge des réparations si nécessaire",
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Nos Garanties – Team Renov | Certification RGE & Assurance Décennale"
+  description="Team Renov est certifié RGE et dispose d'une assurance décennale. Découvrez nos garanties pour une rénovation en toute sérénité."
+>
+  <!-- Hero -->
+  <section class="bg-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Nos Garanties</h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto">
+        Parce que votre tranquillité d'esprit est essentielle, nous mettons en place
+        les certifications et assurances les plus solides du marché.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-light">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center" data-animate>
+        {[
+          { value: "RGE", label: "Certifié" },
+          { value: "10 ans", label: "Assurance décennale" },
+          { value: "100%", label: "Travaux assurés" },
+          { value: "48h", label: "Devis gratuit" },
+        ].map((item) => (
+          <div class="card !p-5">
+            <div class="text-2xl font-bold text-primary">{item.value}</div>
+            <div class="text-sm text-gray-medium">{item.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail cards -->
+  {guarantees.map((g, i) => (
+    <Section title={g.title} subtitle={g.subtitle} bg={i % 2 === 0 ? "white" : "light"}>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start" data-animate>
+        <div>
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+            <Fragment set:html={g.icon} />
+          </div>
+          <p class="text-gray-medium leading-relaxed">{g.description}</p>
+        </div>
+        <div class="bg-primary/5 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold text-primary mb-4">Ce que cela vous apporte</h3>
+          <ul class="space-y-3">
+            {g.benefits.map((b) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                <span class="text-sm text-gray-dark">{b}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Section>
+  ))}
+
+  <!-- Additional guarantees -->
+  <Section
+    title="Nos Engagements Supplémentaires"
+    subtitle="Au-delà des certifications, voici ce que nous vous garantissons."
+    bg="white"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Devis détaillé & transparent", desc: "Chaque poste de dépense est clarifié. Pas de frais cachés ni de mauvaises surprises." },
+        { title: "Respect des délais", desc: "Planning contractuel avec pénalités de retard. Nous nous engageons sur une date de livraison." },
+        { title: "Propreté de chantier", desc: "Protection de vos meubles et sols, nettoyage quotidien et évacuation des gravats." },
+        { title: "Garantie de parfait achèvement", desc: "Pendant 1 an après la réception, nous corrigeons tout défaut signalé." },
+        { title: "Garantie biennale", desc: "Les équipements dissociables (robinets, volets, etc.) sont garantis 2 ans." },
+        { title: "SAV réactif", desc: "Un problème après les travaux ? Nous intervenons rapidement pour le résoudre." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center" data-animate>
+      <h2 class="text-3xl font-bold text-white mb-4">Rassuré ? Lancez votre projet !</h2>
+      <p class="text-white/80 mb-8">Demandez votre devis gratuit et bénéficiez de toutes nos garanties.</p>
+      <a href="/contact" class="btn-primary">Demander un devis gratuit</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Mise aux normes NF C 15-100",
+  "Tableau électrique",
+  "Prises & interrupteurs",
+  "Dépannage rapide",
+];
+
+const relatedServices = [
+  { title: "Placo & Rails", href: "/services/placo-rails" },
+  { title: "Plomberie", href: "/services/plomberie" },
+  { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Peinture", href: "/services/peinture" },
+];
+---
+
+<ServicePageLayout
+  title="Électricité"
+  metaTitle="Électricité – Team Renov | Installation & Mise aux Normes"
+  metaDescription="Installation électrique, mise aux normes NF C 15-100, tableau électrique et dépannage. Électriciens qualifiés, devis gratuit en 48h."
+  category="Travaux Intérieurs"
+  categoryHref="/services#interieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Sécurité et conformité avant tout" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          L'électricité est le système nerveux de votre habitation. Que ce soit pour une
+          installation neuve, une mise aux normes ou un dépannage, nos électriciens
+          qualifiés interviennent dans le respect de la norme NF C 15-100.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Nous réalisons également la pose de luminaires, la création de circuits
+          dédiés (plaque de cuisson, VMC, chauffage) et l'installation de systèmes
+          de domotique pour un confort moderne et sécurisé.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo installation électrique
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations électriques" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Tableau électrique", desc: "Installation ou remplacement de tableau aux normes avec disjoncteurs différentiels." },
+        { title: "Câblage complet", desc: "Tirage de câbles, passage de gaines et raccordements pour installations neuves ou rénovées." },
+        { title: "Prises & interrupteurs", desc: "Pose, déplacement ou ajout de points électriques selon vos besoins." },
+        { title: "Éclairage", desc: "Installation de luminaires, spots encastrés, bandeaux LED et éclairage extérieur." },
+        { title: "Mise en conformité", desc: "Diagnostic de votre installation et mise aux normes NF C 15-100." },
+        { title: "Dépannage", desc: "Intervention rapide pour pannes, courts-circuits et dysfonctionnements." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

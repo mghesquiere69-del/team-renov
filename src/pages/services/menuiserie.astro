@@ -1,0 +1,83 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Portes & fenêtres",
+  "Volets & persiennes",
+  "Placards & dressings",
+  "Sur mesure",
+];
+
+const relatedServices = [
+  { title: "Placo & Rails", href: "/services/placo-rails" },
+  { title: "Peinture", href: "/services/peinture" },
+  { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
+];
+---
+
+<ServicePageLayout
+  title="Menuiserie"
+  metaTitle="Menuiserie – Team Renov | Portes, Fenêtres & Aménagements sur Mesure"
+  metaDescription="Pose et rénovation de menuiseries intérieures et extérieures : portes, fenêtres, volets, placards. Devis gratuit en 48h."
+  category="Menuiserie"
+  categoryHref="/services#menuiserie"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.385-5.384a1.687 1.687 0 010-2.386l6.17-6.17a1.687 1.687 0 012.387 0l5.384 5.384M3.75 21h16.5M6.75 18.75v-3m9-1.5v4.5"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Des menuiseries qui allient esthétique et performance" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          La menuiserie joue un rôle essentiel dans l'isolation, la sécurité et
+          l'esthétique de votre habitat. Nos menuisiers posent et rénovent l'ensemble
+          de vos menuiseries intérieures et extérieures : portes, fenêtres, volets,
+          portails, placards et dressings.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Nous travaillons le bois, le PVC, l'aluminium et les matériaux mixtes pour
+          vous proposer des solutions adaptées à vos exigences en termes d'isolation
+          thermique et phonique, de sécurité et de design.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo pose menuiserie
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations menuiserie" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Portes intérieures", desc: "Pose de portes battantes, coulissantes, à galandage ou blindées. Tous matériaux." },
+        { title: "Portes d'entrée", desc: "Installation de portes d'entrée sécurisées, isolantes et esthétiques." },
+        { title: "Fenêtres & baies vitrées", desc: "Pose en neuf ou en rénovation de fenêtres double/triple vitrage et baies coulissantes." },
+        { title: "Volets & persiennes", desc: "Volets roulants, battants ou coulissants. Motorisation possible." },
+        { title: "Placards & dressings", desc: "Création de rangements sur mesure : placards, dressings et bibliothèques intégrées." },
+        { title: "Escaliers & garde-corps", desc: "Pose et rénovation d'escaliers en bois, métal ou mixte avec garde-corps assortis." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section title="Matériaux disponibles" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6" data-animate>
+      {[
+        { title: "Bois", desc: "Chaleureux et noble, le bois offre une excellente isolation et un charme authentique. Entretien périodique recommandé." },
+        { title: "PVC", desc: "Économique et sans entretien, le PVC offre de bonnes performances d'isolation. Large choix de coloris." },
+        { title: "Aluminium", desc: "Fin, moderne et robuste, l'aluminium permet de grandes surfaces vitrées et une esthétique contemporaine." },
+      ].map((item) => (
+        <div class="card text-center">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

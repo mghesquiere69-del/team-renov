@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  id?: string;
+  class?: string;
+  bg?: "white" | "light" | "primary";
+}
+
+const { title, subtitle, id, class: className = "", bg = "white" } = Astro.props;
+
+const bgClasses = {
+  white: "bg-white",
+  light: "bg-gray-light",
+  primary: "bg-primary text-white",
+};
+---
+
+<section id={id} class:list={[bgClasses[bg], "py-20 px-4 sm:px-6 lg:px-8", className]}>
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-14" data-animate>
+      <h2 class:list={["section-title", bg === "primary" && "!text-white"]}>{title}</h2>
+      {subtitle && (
+        <p class:list={["section-subtitle", bg === "primary" && "!text-white/80"]}>{subtitle}</p>
+      )}
+    </div>
+    <slot />
+  </div>
+</section>

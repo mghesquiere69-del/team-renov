@@ -1,0 +1,97 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Un seul interlocuteur",
+  "Coordination totale",
+  "Planning garanti",
+  "Suivi quotidien",
+];
+
+const relatedServices = [
+  { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Placo & Rails", href: "/services/placo-rails" },
+  { title: "Électricité", href: "/services/electricite" },
+  { title: "Plomberie", href: "/services/plomberie" },
+  { title: "Carrelage", href: "/services/carrelage" },
+  { title: "Peinture", href: "/services/peinture" },
+];
+---
+
+<ServicePageLayout
+  title="Projets clés en main"
+  metaTitle="Projets Clés en Main – Team Renov | Rénovation Complète Coordonnée"
+  metaDescription="Accompagnement complet de A à Z pour vos projets de rénovation. Un seul interlocuteur, tous les corps de métier. Devis gratuit en 48h."
+  category="Clé en main"
+  categoryHref="/services#cle-en-main"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Votre projet, notre responsabilité" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          Un projet de rénovation peut vite devenir un casse-tête : multiples artisans
+          à coordonner, délais qui s'allongent, imprévus à gérer… Notre solution clé en
+          main vous libère de toutes ces contraintes.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Un seul interlocuteur vous accompagne de la conception à la livraison. Nous
+          coordonnons tous les corps de métier — plomberie, électricité, maçonnerie,
+          placo, carrelage, peinture, menuiserie — pour un résultat cohérent, dans les
+          temps et le budget annoncé.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo projet clé en main
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Notre processus en 6 étapes" bg="light">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-animate>
+      {[
+        { step: "01", title: "Premier contact", desc: "Échange sur vos besoins, votre budget et vos contraintes. Visite technique sur site." },
+        { step: "02", title: "Étude & conception", desc: "Plans détaillés, choix des matériaux, planning prévisionnel et devis complet poste par poste." },
+        { step: "03", title: "Validation", desc: "Révision du projet ensemble, ajustements et signature du devis définitif." },
+        { step: "04", title: "Travaux", desc: "Coordination de toutes les équipes avec un chef de chantier dédié et suivi quotidien." },
+        { step: "05", title: "Contrôle qualité", desc: "Vérification de chaque poste de travaux, liste des réserves éventuelles." },
+        { step: "06", title: "Réception & garantie", desc: "Remise des clés, PV de réception et activation de la garantie décennale." },
+      ].map((item) => (
+        <div class="card text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+            {item.step}
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section title="Ce que comprend notre offre" bg="white">
+    <div class="max-w-3xl mx-auto" data-animate>
+      <div class="space-y-4">
+        {[
+          "Visite technique et prise de cotes",
+          "Devis détaillé et transparent sous 48h",
+          "Planning de travaux contractuel",
+          "Coordination de tous les corps de métier",
+          "Chef de chantier dédié à votre projet",
+          "Suivi photo quotidien par message",
+          "Évacuation des gravats et nettoyage de chantier",
+          "Contrôle qualité avant livraison",
+          "Garantie décennale et parfait achèvement",
+          "SAV réactif après réception",
+        ].map((item) => (
+          <div class="flex items-center gap-3 p-4 bg-gray-light rounded-lg">
+            <svg class="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            <span class="text-sm font-medium text-gray-dark">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Section>
+</ServicePageLayout>

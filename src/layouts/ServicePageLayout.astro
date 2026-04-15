@@ -1,0 +1,85 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  category: string;
+  categoryHref: string;
+  icon: string;
+  highlights: string[];
+  relatedServices: { title: string; href: string }[];
+}
+
+const {
+  title,
+  metaTitle,
+  metaDescription,
+  category,
+  categoryHref,
+  icon,
+  highlights,
+  relatedServices,
+} = Astro.props;
+---
+
+<BaseLayout title={metaTitle} description={metaDescription}>
+  <!-- Hero -->
+  <section class="bg-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+        <a href="/services" class="text-sm text-white/80 hover:text-white transition-colors">Nos Services</a>
+        <svg class="w-4 h-4 text-white/40" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        <a href={categoryHref} class="text-sm text-white/80 hover:text-white transition-colors">{category}</a>
+      </div>
+      <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white">
+        <Fragment set:html={icon} />
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">{title}</h1>
+    </div>
+  </section>
+
+  <!-- Highlights strip -->
+  <section class="bg-gray-light py-8 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-6">
+        {highlights.map((h) => (
+          <div class="flex items-center gap-2 text-sm text-gray-dark">
+            <svg class="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            {h}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content slot -->
+  <slot />
+
+  <!-- Related services -->
+  <section class="bg-gray-light py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-primary text-center mb-8">Services associés</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" data-animate>
+        {relatedServices.map((s) => (
+          <a href={s.href} class="card !p-4 text-center hover:border-primary/20 border border-transparent">
+            <span class="text-sm font-medium text-primary">{s.title}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center" data-animate>
+      <h2 class="text-3xl font-bold text-white mb-4">Besoin d'un devis pour {title.toLowerCase()} ?</h2>
+      <p class="text-white/80 mb-8">Recevez votre devis gratuit sous 48h. Sans engagement.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary">Demander un devis gratuit</a>
+        <a href="tel:+33123456789" class="btn-secondary">01 23 45 67 89</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

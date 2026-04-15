@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+
+const values = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>`,
+    title: "Discipline",
+    description: "Comme au dojo, chaque geste compte. Nous suivons des processus rigoureux à chaque étape pour garantir un résultat irréprochable.",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.562.562 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>`,
+    title: "Rigueur",
+    description: "Aucun détail n'est laissé au hasard. De la prise de cotes à la finition, nous visons l'excellence artisanale.",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>`,
+    title: "Respect",
+    description: "Respect de votre domicile, de vos délais et de votre budget. Nous traitons chaque projet comme si c'était le nôtre.",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z"/></svg>`,
+    title: "Engagement",
+    description: "Nous nous engageons sur un résultat, un délai et un prix. Pas de mauvaises surprises, que des promesses tenues.",
+  },
+];
+
+const team = [
+  { name: "Karim B.", role: "Fondateur & Chef de chantier", initials: "KB" },
+  { name: "Lucas M.", role: "Responsable travaux intérieurs", initials: "LM" },
+  { name: "Ahmed T.", role: "Maçon-carreleur senior", initials: "AT" },
+  { name: "Julie R.", role: "Responsable relation client", initials: "JR" },
+];
+---
+
+<BaseLayout
+  title="À Propos – Team Renov | Notre Histoire et Nos Valeurs"
+  description="Découvrez l'histoire de Team Renov, nos valeurs inspirées du Kyokushin et notre équipe d'artisans passionnés."
+>
+  <!-- Hero -->
+  <section class="bg-primary py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">À Propos de Team Renov</h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto">
+        Une entreprise bâtie sur des valeurs fortes, où chaque projet est mené
+        avec la discipline et la rigueur d'un art martial.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <Section title="Notre Histoire" bg="white">
+    <div class="max-w-3xl mx-auto" data-animate>
+      <div class="prose prose-lg text-gray-medium mx-auto space-y-4">
+        <p>
+          Team Renov est née d'une passion commune pour le bâtiment et d'une conviction :
+          la rénovation mérite autant de rigueur et de respect que n'importe quel art.
+          Fondée par des artisans expérimentés, notre entreprise s'est construite projet
+          après projet, en plaçant toujours la satisfaction client au centre de chaque décision.
+        </p>
+        <p>
+          Notre nom <strong>Team</strong> symbolise l'esprit d'équipe qui nous anime au quotidien.
+          Chaque collaborateur apporte son expertise unique pour créer un résultat harmonieux.
+          Comme dans le Kyokushin, art martial qui inspire notre philosophie, nous croyons
+          que la discipline individuelle au service du collectif produit l'excellence.
+        </p>
+        <p>
+          Aujourd'hui, avec plus de 500 projets réalisés et une équipe de 25 artisans
+          qualifiés, nous continuons de grandir sans jamais perdre ce qui fait notre
+          force : la proximité avec nos clients et l'exigence dans l'exécution.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Values -->
+  <Section
+    title="Nos Valeurs"
+    subtitle="Inspirées du Kyokushin, ces quatre piliers guident chacune de nos actions."
+    bg="light"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-animate>
+      {values.map((v) => (
+        <div class="card text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary">
+            <Fragment set:html={v.icon} />
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-3">{v.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{v.description}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Team -->
+  <Section
+    title="Notre Équipe"
+    subtitle="Des professionnels passionnés et expérimentés, dédiés à la réussite de votre projet."
+    bg="white"
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-animate>
+      {team.map((member) => (
+        <div class="card text-center">
+          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-white">{member.initials}</span>
+          </div>
+          <h3 class="text-lg font-semibold text-primary">{member.name}</h3>
+          <p class="text-sm text-gray-medium">{member.role}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center" data-animate>
+      <h2 class="text-3xl font-bold text-white mb-4">Envie de travailler avec nous ?</h2>
+      <p class="text-white/80 mb-8">Discutons de votre projet et voyons comment nous pouvons vous accompagner.</p>
+      <a href="/contact" class="btn-primary">Nous contacter</a>
+    </div>
+  </section>
+</BaseLayout>

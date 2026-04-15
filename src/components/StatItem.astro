@@ -1,0 +1,17 @@
+---
+interface Props {
+  icon: string;
+  value: string;
+  label: string;
+}
+
+const { icon, value, label } = Astro.props;
+---
+
+<div class="text-center" data-animate>
+  <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+    <span class="text-xl text-accent" set:html={icon} />
+  </div>
+  <div class="text-3xl font-bold text-primary mb-1">{value}</div>
+  <div class="text-sm text-gray-medium">{label}</div>
+</div>

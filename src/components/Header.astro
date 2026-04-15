@@ -1,0 +1,122 @@
+---
+const navLinks = [
+  { href: "/", label: "Accueil" },
+  { href: "/services", label: "Nos Services" },
+  { href: "/a-propos", label: "À Propos" },
+  { href: "/garanties", label: "Garanties" },
+  { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm" id="site-header">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
+    <div class="flex items-center justify-between h-18">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group" aria-label="Team Renov – Accueil">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg group-hover:bg-primary-light transition-colors">
+          TR
+        </div>
+        <div class="hidden sm:block">
+          <span class="text-xl font-bold text-primary">Team Renov</span>
+          <span class="block text-xs text-gray-medium -mt-1">Rénovation & Construction</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden lg:flex items-center gap-1" role="list">
+        {navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                currentPath === href
+                  ? "bg-primary/10 text-primary"
+                  : "text-gray-dark hover:bg-gray-100 hover:text-primary",
+              ]}
+              aria-current={currentPath === href ? "page" : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+        <li class="ml-4">
+          <a href="/contact" class="btn-primary text-sm !py-2 !px-5">
+            Demander un devis
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        class="lg:hidden p-2 rounded-lg text-gray-dark hover:bg-gray-100 transition-colors"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Ouvrir le menu"
+        id="menu-toggle"
+      >
+        <svg class="w-6 h-6" id="icon-open" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg class="w-6 h-6 hidden" id="icon-close" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="lg:hidden hidden pb-4" id="mobile-menu" role="navigation" aria-label="Menu mobile">
+      <ul class="space-y-1" role="list">
+        {navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                "block px-4 py-3 rounded-lg font-medium transition-colors",
+                currentPath === href
+                  ? "bg-primary/10 text-primary"
+                  : "text-gray-dark hover:bg-gray-100",
+              ]}
+              aria-current={currentPath === href ? "page" : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+        <li class="pt-2">
+          <a href="/contact" class="btn-primary w-full text-center text-sm">
+            Demander un devis
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-18" aria-hidden="true"></div>
+
+<script>
+  const toggle = document.getElementById("menu-toggle")!;
+  const menu = document.getElementById("mobile-menu")!;
+  const iconOpen = document.getElementById("icon-open")!;
+  const iconClose = document.getElementById("icon-close")!;
+
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    toggle.setAttribute("aria-label", expanded ? "Ouvrir le menu" : "Fermer le menu");
+    menu.classList.toggle("hidden");
+    iconOpen.classList.toggle("hidden");
+    iconClose.classList.toggle("hidden");
+  });
+
+  // Shrink header on scroll
+  const header = document.getElementById("site-header")!;
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow-md", window.scrollY > 50);
+  }, { passive: true });
+</script>

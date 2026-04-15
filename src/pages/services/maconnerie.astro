@@ -1,0 +1,67 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Construction & extension",
+  "Murs de soutènement",
+  "Réparation de structures",
+  "Parpaing, brique & pierre",
+];
+
+const relatedServices = [
+  { title: "Carrelage extérieur", href: "/services/carrelage-exterieur" },
+  { title: "Enduit projeté", href: "/services/enduit-projete" },
+  { title: "Drain français", href: "/services/drain-francais" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
+];
+---
+
+<ServicePageLayout
+  title="Maçonnerie"
+  metaTitle="Maçonnerie – Team Renov | Construction, Réparation & Renforcement"
+  metaDescription="Travaux de maçonnerie : construction, réparation et renforcement de structures. Maçons qualifiés, devis gratuit en 48h."
+  category="Travaux Extérieurs"
+  categoryHref="/services#exterieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Des fondations solides pour vos projets" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          La maçonnerie est le fondement de tout projet de construction ou de rénovation
+          extérieure. Nos maçons expérimentés interviennent sur tous types d'ouvrages :
+          construction de murs, murets, piliers, escaliers extérieurs et extensions.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Nous travaillons le parpaing, la brique, la pierre naturelle et le béton armé
+          pour des réalisations durables et conformes aux règles de l'art. Chaque ouvrage
+          est réalisé avec rigueur pour garantir solidité et longévité.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo chantier maçonnerie
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations maçonnerie" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Murs & clôtures", desc: "Construction de murs de clôture, murets et piliers en parpaing, brique ou pierre." },
+        { title: "Murs de soutènement", desc: "Ouvrages de soutènement pour terrains en pente avec drainage et étanchéité." },
+        { title: "Fondations", desc: "Coulage de fondations, semelles filantes et dalles béton pour constructions neuves." },
+        { title: "Extensions", desc: "Construction d'extensions, vérandas et agrandissements en maçonnerie traditionnelle." },
+        { title: "Escaliers extérieurs", desc: "Réalisation d'escaliers en béton, pierre ou reconstitué pour accès et terrasses." },
+        { title: "Réparations", desc: "Traitement des fissures, reprise de murs dégradés et consolidation de structures." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

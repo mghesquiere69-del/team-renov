@@ -1,0 +1,67 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Sol & mur",
+  "Faïence & mosaïque",
+  "Grands formats",
+  "Pose rectifiée",
+];
+
+const relatedServices = [
+  { title: "Plomberie", href: "/services/plomberie" },
+  { title: "Enduit", href: "/services/enduit" },
+  { title: "Carrelage extérieur", href: "/services/carrelage-exterieur" },
+  { title: "Rénovation complète", href: "/services/renovation-complete" },
+];
+---
+
+<ServicePageLayout
+  title="Carrelage sol & mur"
+  metaTitle="Carrelage Sol & Mur – Team Renov | Pose de Carrelage & Faïence"
+  metaDescription="Pose de carrelage, faïence et mosaïque pour cuisines, salles de bain et pièces de vie. Carreleurs qualifiés, devis gratuit en 48h."
+  category="Travaux Intérieurs"
+  categoryHref="/services#interieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="L'art du carrelage" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          Le carrelage est bien plus qu'un revêtement : c'est un élément central de votre
+          décoration intérieure. Nos carreleurs expérimentés maîtrisent la pose de tous types
+          de carreaux, des petits formats traditionnels aux grands formats modernes.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Cuisine, salle de bain, séjour ou entrée : nous vous conseillons sur le choix des
+          matériaux (grès cérame, faïence, mosaïque, pierre naturelle) et réalisons une pose
+          soignée avec des joints réguliers et durables.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo pose de carrelage
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations carrelage" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Carrelage de sol", desc: "Pose collée ou scellée de carrelage pour toutes pièces de vie, y compris grands formats." },
+        { title: "Faïence murale", desc: "Revêtement mural en faïence pour cuisines et salles de bain, avec finitions soignées." },
+        { title: "Mosaïque", desc: "Pose de mosaïque décorative pour crédences, douches à l'italienne et éléments design." },
+        { title: "Chape & ragréage", desc: "Préparation du support avec chape et ragréage pour garantir une pose parfaite." },
+        { title: "Remplacement partiel", desc: "Dépose et remplacement de carreaux cassés ou abîmés à l'identique." },
+        { title: "Joints & étanchéité", desc: "Réalisation de joints résistants et application de traitements hydrofuges." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

@@ -1,0 +1,87 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Cuisine & salle de bain",
+  "Grenier & combles",
+  "Salle à manger",
+  "Tous corps de métier",
+];
+
+const relatedServices = [
+  { title: "Placo & Rails", href: "/services/placo-rails" },
+  { title: "Électricité", href: "/services/electricite" },
+  { title: "Plomberie", href: "/services/plomberie" },
+  { title: "Carrelage", href: "/services/carrelage" },
+  { title: "Peinture", href: "/services/peinture" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
+];
+---
+
+<ServicePageLayout
+  title="Rénovation complète"
+  metaTitle="Rénovation Complète – Team Renov | Cuisine, Salle de Bain, Appartement"
+  metaDescription="Rénovation intégrale de cuisine, salle de bain, grenier et pièces de vie. Coordination tous corps de métier, devis gratuit en 48h."
+  category="Travaux Intérieurs"
+  categoryHref="/services#interieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Transformez entièrement vos espaces" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          Vous souhaitez rénover entièrement une pièce ou un appartement ? Notre équipe
+          coordonne l'ensemble des corps de métier — plomberie, électricité, placo,
+          carrelage, peinture — pour un résultat harmonieux et clé en main.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Cuisine, salle de bain, salon, grenier ou combles aménageables : chaque projet
+          est étudié sur mesure pour optimiser l'espace, améliorer le confort et valoriser
+          votre bien immobilier.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo rénovation complète
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Types de rénovation" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto" data-animate>
+      {[
+        { title: "Rénovation cuisine", desc: "Dépose de l'ancienne cuisine, création du réseau plomberie/électricité, pose du carrelage, installation des meubles et électroménager." },
+        { title: "Rénovation salle de bain", desc: "Transformation complète : douche à l'italienne, baignoire, meuble vasque, carrelage mural et sol, ventilation." },
+        { title: "Rénovation salle à manger", desc: "Redistribution de l'espace, revêtements de sol, éclairage, peinture et finitions décoratives." },
+        { title: "Aménagement de grenier", desc: "Isolation des combles, création de cloisons, pose de velux, électricité et finitions pour un espace habitable." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section title="Notre processus de rénovation" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6" data-animate>
+      {[
+        { step: "01", title: "Écoute", desc: "Compréhension de vos besoins, envies et contraintes budgétaires." },
+        { step: "02", title: "Conception", desc: "Plans, choix des matériaux et planning prévisionnel détaillé." },
+        { step: "03", title: "Démolition", desc: "Dépose de l'existant, évacuation des gravats et préparation du chantier." },
+        { step: "04", title: "Travaux", desc: "Coordination de tous les artisans avec suivi quotidien." },
+        { step: "05", title: "Livraison", desc: "Nettoyage, contrôle qualité et remise des clés." },
+      ].map((item) => (
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+            {item.step}
+          </div>
+          <h3 class="text-sm font-semibold text-primary mb-1">{item.title}</h3>
+          <p class="text-xs text-gray-medium">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>

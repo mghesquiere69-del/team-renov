@@ -1,0 +1,67 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import Section from "../../components/Section.astro";
+
+const highlights = [
+  "Façades neuves & rénovation",
+  "Protection durable",
+  "Choix de textures",
+  "Coloris personnalisés",
+];
+
+const relatedServices = [
+  { title: "Maçonnerie", href: "/services/maconnerie" },
+  { title: "Carrelage extérieur", href: "/services/carrelage-exterieur" },
+  { title: "Drain français", href: "/services/drain-francais" },
+  { title: "Enduit intérieur", href: "/services/enduit" },
+];
+---
+
+<ServicePageLayout
+  title="Enduit projeté"
+  metaTitle="Enduit Projeté – Team Renov | Façades Modernes & Protégées"
+  metaDescription="Application d'enduit projeté pour façades modernes et protégées durablement. Artisans façadiers qualifiés, devis gratuit en 48h."
+  category="Travaux Extérieurs"
+  categoryHref="/services#exterieurs"
+  icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128z"/></svg>`}
+  highlights={highlights}
+  relatedServices={relatedServices}
+>
+  <Section title="Une façade qui protège et embellit" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          L'enduit projeté (ou crépi) est la solution idéale pour habiller et protéger
+          vos façades. Projeté mécaniquement, il offre une finition régulière et durable
+          qui résiste aux intempéries et aux variations de température.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Nos façadiers maîtrisent les différentes textures — grattée, ribbée, écrasée,
+          talochée — et vous proposent un large choix de coloris pour personnaliser
+          l'aspect extérieur de votre maison tout en la protégeant durablement.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
+        Photo enduit projeté façade
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Nos prestations façade" bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        { title: "Enduit projeté neuf", desc: "Application d'enduit sur construction neuve avec sous-couche d'accrochage adaptée." },
+        { title: "Ravalement de façade", desc: "Rénovation de façade existante : nettoyage, réparation des fissures et nouvel enduit." },
+        { title: "Finition grattée", desc: "Texture grattée pour un aspect traditionnel et régulier, très résistante." },
+        { title: "Finition ribbée", desc: "Texture à effets de lignes pour une façade moderne et dynamique." },
+        { title: "Enduit taloché", desc: "Finition lisse et contemporaine, appliquée à la taloche pour un rendu élégant." },
+        { title: "Traitement des fissures", desc: "Réparation des fissures structurelles avec armature et enduit de renfort." },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</ServicePageLayout>
