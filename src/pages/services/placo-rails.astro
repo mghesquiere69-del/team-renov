@@ -3,10 +3,10 @@ import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
 import Section from "../../components/Section.astro";
 
 const highlights = [
-  "Cloisons & séparations",
-  "Faux plafonds",
-  "Isolation thermique & phonique",
-  "Finitions soignées",
+  "Aménagement intérieur sur mesure",
+  "Placo, rails et cloisons",
+  "Isolation thermique et acoustique",
+  "Devis gratuit et transparent",
 ];
 
 const relatedServices = [
@@ -18,44 +18,48 @@ const relatedServices = [
 ---
 
 <ServicePageLayout
-  title="Placo & Rails"
-  metaTitle="Placo & Rails – Team Renov | Cloisons, Faux Plafonds & Isolation"
-  metaDescription="Pose de plaques de plâtre, création de cloisons, faux plafonds et isolation intérieure. Artisans qualifiés, devis gratuit en 48h."
+  title="Installation de Placo & Rails – Cloisons et Faux Plafonds"
+  metaTitle="Placo & Rails – Team Renov | Aménagement Intérieur Sur Mesure"
+  metaDescription="Aménagement intérieur sur mesure en placo : cloisons, faux plafonds, isolation thermique et acoustique. Matériaux professionnels et devis gratuit."
   category="Travaux Intérieurs"
   categoryHref="/services#interieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25a2.25 2.25 0 01-2.25-2.25v-2.25z"/></svg>`}
   highlights={highlights}
   relatedServices={relatedServices}
 >
-  <Section title="Un aménagement sur mesure" bg="white">
+  <Section title="Transformez votre intérieur avec des experts en placo" bg="white">
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
       <div class="space-y-4">
         <p class="text-gray-medium leading-relaxed">
-          La pose de placo et de rails est la base de tout aménagement intérieur réussi.
-          Que vous souhaitiez créer de nouvelles pièces, isoler votre logement ou habiller
-          vos murs et plafonds, nos plaquistes interviennent avec précision et savoir-faire.
+          Vous souhaitez aménager votre intérieur, créer de nouveaux espaces ou améliorer le
+          confort de votre logement ? Notre entreprise spécialisée en pose de placo et travaux
+          de plâtrerie vous accompagne dans tous vos projets, en neuf comme en rénovation.
         </p>
         <p class="text-gray-medium leading-relaxed">
-          Nous utilisons exclusivement des matériaux de qualité (Placo®, Knauf, Siniat) et
-          respectons les DTU en vigueur pour vous garantir un résultat durable, conforme aux
-          normes thermiques et acoustiques.
+          Grâce à notre expertise, nous réalisons des aménagements sur mesure, adaptés à vos
+          besoins et à votre budget.
         </p>
       </div>
-      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-        Photo chantier placo
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] overflow-hidden">
+        <img
+          src="/images/services/placo-rails-avant.jpg"
+          alt="Photo de chantier placo en cours de réalisation"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
     </div>
   </Section>
 
-  <Section title="Nos prestations placo" bg="light">
+  <Section title="Nos prestations en aménagement intérieur" bg="light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
       {[
-        { title: "Cloisons de distribution", desc: "Création de pièces, séparations légères et cloisons de doublage pour redistribuer vos espaces." },
-        { title: "Faux plafonds", desc: "Plafonds suspendus en plaques de plâtre pour masquer les gaines et améliorer l'esthétique." },
-        { title: "Isolation thermique", desc: "Doublage avec laine de verre, laine de roche ou polystyrène pour une meilleure performance énergétique." },
-        { title: "Isolation phonique", desc: "Solutions acoustiques pour réduire les nuisances sonores entre pièces et avec l'extérieur." },
-        { title: "Habillage de murs", desc: "Mise en place de plaques pour rattraper des murs irréguliers ou créer des niches décoratives." },
-        { title: "Trappe de visite", desc: "Pose de trappes d'accès pour gaines techniques, plomberie et électricité." },
+        { title: "Pose de placo et cloisons", desc: "Création de cloisons en placo, séparation de pièces et aménagement de combles pour créer bureaux, chambres ou espaces de vie." },
+        { title: "Isolation thermique et acoustique", desc: "Isolation des murs et plafonds, amélioration des performances énergétiques et réduction des nuisances sonores." },
+        { title: "Habillage murs et plafonds", desc: "Pose de plaques de plâtre, faux plafonds, coffrages et habillages techniques avec finitions prêtes à peindre." },
+        { title: "Confort toute l'année", desc: "Confort thermique été comme hiver grâce à des solutions de doublage adaptées à votre logement." },
+        { title: "Matériaux professionnels", desc: "Utilisation de matériaux reconnus : Placo, Knauf et Siniat, pour une excellente résistance dans le temps." },
+        { title: "Finition propre et esthétique", desc: "Traitement soigné des joints et surfaces pour un rendu net, durable et prêt pour la mise en peinture." },
       ].map((item) => (
         <div class="card">
           <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
@@ -65,13 +69,45 @@ const relatedServices = [
     </div>
   </Section>
 
-  <Section title="Notre méthode de travail" bg="white">
+  <Section title="Avant / Après : transformation en placo" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6" data-animate>
+      <figure class="card overflow-hidden p-0">
+        <div class="aspect-[4/3] bg-gray-200">
+          <img
+            src="/images/services/placo-rails-avant.jpg"
+            alt="Pièce en cours de rénovation avant pose du placo"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <figcaption class="p-4 text-sm text-gray-medium">
+          Avant : pièce brute en cours de rénovation.
+        </figcaption>
+      </figure>
+
+      <figure class="card overflow-hidden p-0">
+        <div class="aspect-[4/3] bg-gray-200">
+          <img
+            src="/images/services/placo-rails-apres.jpg"
+            alt="Pièce après pose des cloisons et faux plafonds en placo"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <figcaption class="p-4 text-sm text-gray-medium">
+          Après : cloisons et faux plafonds posés, finitions prêtes à peindre.
+        </figcaption>
+      </figure>
+    </div>
+  </Section>
+
+  <Section title="Respect des normes et qualité de finition" bg="white">
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6" data-animate>
       {[
-        { step: "01", title: "Visite technique", desc: "Prise de cotes, analyse des contraintes et recommandations techniques." },
-        { step: "02", title: "Devis détaillé", desc: "Chiffrage précis poste par poste, envoyé sous 48h." },
-        { step: "03", title: "Réalisation", desc: "Pose des rails, montage des plaques, traitement des joints." },
-        { step: "04", title: "Finitions", desc: "Enduit, ponçage et nettoyage pour des surfaces prêtes à peindre." },
+        { step: "01", title: "Travaux conformes", desc: "Tous nos travaux sont réalisés dans le respect des DTU (Documents Techniques Unifiés) et des normes en vigueur." },
+        { step: "02", title: "Installation conforme", desc: "Mise en oeuvre rigoureuse pour garantir la sécurité et la conformité de votre aménagement intérieur." },
+        { step: "03", title: "Isolation optimale", desc: "Isolation thermique et phonique performante pour améliorer durablement le confort de votre habitat." },
+        { step: "04", title: "Chantier soigné", desc: "Durabilité maximale avec une finition propre, précise et un chantier maintenu propre à chaque étape." },
       ].map((item) => (
         <div class="text-center">
           <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
@@ -81,6 +117,29 @@ const relatedServices = [
           <p class="text-sm text-gray-medium">{item.desc}</p>
         </div>
       ))}
+    </div>
+  </Section>
+
+  <Section title="Pourquoi faire appel à nous ?" bg="light">
+    <div class="max-w-4xl mx-auto space-y-6" data-animate>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-medium">
+        <li class="card">Plaquistes expérimentés</li>
+        <li class="card">Travail soigné et précis</li>
+        <li class="card">Conseils personnalisés</li>
+        <li class="card">Respect des délais</li>
+        <li class="card sm:col-span-2">Devis gratuit et transparent</li>
+      </ul>
+      <p class="text-gray-medium leading-relaxed">
+        Nous mettons un point d'honneur à offrir un service fiable et un accompagnement complet,
+        de l'étude du projet jusqu'à la réalisation finale.
+      </p>
+      <p class="text-gray-medium leading-relaxed">
+        Un projet d'aménagement intérieur ? Confiez-nous vos travaux de placo, isolation et
+        aménagement intérieur sur mesure.
+      </p>
+      <p class="text-base font-medium text-primary">
+        Contactez-nous dès maintenant pour obtenir un devis gratuit et des conseils adaptés à votre projet.
+      </p>
     </div>
   </Section>
 </ServicePageLayout>
