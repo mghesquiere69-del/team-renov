@@ -4,24 +4,7 @@ import Section from "../components/Section.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import StatItem from "../components/StatItem.astro";
 import TestimonialCard from "../components/TestimonialCard.astro";
-
-const highlights = [
-  {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008H15.75v-.008zm0 2.25h.008v.008H15.75V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/></svg>`,
-    title: "Estimation en ligne unique",
-    description: "Obtenez une première estimation de votre projet directement en ligne, sans engagement.",
-  },
-  {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
-    title: "Devis en 48h",
-    description: "Recevez un devis détaillé et transparent sous 48 heures après votre demande.",
-  },
-  {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>`,
-    title: "Suivi quotidien",
-    description: "Restez informé chaque jour de l'avancement de votre chantier via un lien direct avec nos équipes.",
-  },
-];
+import HighlightsStrip from "../components/HighlightsStrip.astro";
 
 const services = [
   {
@@ -123,22 +106,8 @@ const stats = [
     </div>
   </section>
 
-  <!-- HIGHLIGHTS (3 pillars) -->
-  <section class="py-16 px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {highlights.map((item) => (
-          <div class="card flex flex-col items-center text-center border border-gray-100" data-animate>
-            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 text-primary">
-              <Fragment set:html={item.icon} />
-            </div>
-            <h3 class="text-lg font-bold text-primary mb-2">{item.title}</h3>
-            <p class="text-sm text-gray-medium leading-relaxed">{item.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <!-- HIGHLIGHTS (4 pillars) -->
+  <HighlightsStrip />
 
   <!-- SERVICES -->
   <Section

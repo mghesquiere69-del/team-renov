@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import HighlightsStrip from "../components/HighlightsStrip.astro";
 
 interface Props {
   title: string;
@@ -8,7 +9,6 @@ interface Props {
   category: string;
   categoryHref: string;
   icon: string;
-  highlights: string[];
   relatedServices: { title: string; href: string }[];
 }
 
@@ -19,7 +19,6 @@ const {
   category,
   categoryHref,
   icon,
-  highlights,
   relatedServices,
 } = Astro.props;
 ---
@@ -41,18 +40,7 @@ const {
   </section>
 
   <!-- Highlights strip -->
-  <section class="bg-gray-light py-8 px-4 sm:px-6 lg:px-8 border-b border-gray-200">
-    <div class="max-w-5xl mx-auto">
-      <div class="flex flex-wrap justify-center gap-6">
-        {highlights.map((h) => (
-          <div class="flex items-center gap-2 text-sm text-gray-dark">
-            <svg class="w-5 h-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            {h}
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <HighlightsStrip />
 
   <!-- Main content slot -->
   <slot />
