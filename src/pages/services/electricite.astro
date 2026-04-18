@@ -3,9 +3,9 @@ import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
 import Section from "../../components/Section.astro";
 
 const highlights = [
-  "Mise aux normes NF C 15-100",
-  "Tableau électrique",
-  "Prises & interrupteurs",
+  "Installation aux normes",
+  "Devis gratuit sous 48h",
+  "Artisans qualifiés",
   "Dépannage rapide",
 ];
 
@@ -14,52 +14,239 @@ const relatedServices = [
   { title: "Plomberie", href: "/services/plomberie" },
   { title: "Rénovation complète", href: "/services/renovation-complete" },
   { title: "Peinture", href: "/services/peinture" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
 ];
 ---
 
 <ServicePageLayout
   title="Électricité"
-  metaTitle="Électricité – Team Renov | Installation & Mise aux Normes"
-  metaDescription="Installation électrique, mise aux normes NF C 15-100, tableau électrique et dépannage. Électriciens qualifiés, devis gratuit en 48h."
+  metaTitle="Électricien – Team Renov | Installation & Normes"
+  metaDescription="Électricien en Île-de-France : installation, mise aux normes NF C 15-100, tableau, dépannage. Devis gratuit 48h. Assurance décennale."
   category="Travaux Intérieurs"
   categoryHref="/services#interieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`}
   highlights={highlights}
   relatedServices={relatedServices}
 >
-  <Section title="Sécurité et conformité avant tout" bg="white">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
-      <div class="space-y-4">
+  <!-- SECTION 1 — Accroche : Problème → Agitation → Solution -->
+  <Section title="Votre installation électrique est-elle encore aux normes ?" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-animate>
+      <div class="space-y-5">
         <p class="text-gray-medium leading-relaxed">
-          L'électricité est le système nerveux de votre habitation. Que ce soit pour une
-          installation neuve, une mise aux normes ou un dépannage, nos électriciens
-          qualifiés interviennent dans le respect de la norme NF C 15-100.
+          Prises qui noircissent, disjoncteur qui saute, fils apparents datant des années 80…
+          <strong class="text-gray-dark">Plus de 7 millions de logements en France ont une installation électrique dangereuse.</strong>
+          Chaque année, les défauts électriques causent plus de 50 000 incendies domestiques.
+          Si votre tableau est encore équipé de fusibles à broches ou si vous n'avez pas de disjoncteur différentiel 30 mA, votre logement présente un risque réel.
         </p>
         <p class="text-gray-medium leading-relaxed">
-          Nous réalisons également la pose de luminaires, la création de circuits
-          dédiés (plaque de cuisson, VMC, chauffage) et l'installation de systèmes
-          de domotique pour un confort moderne et sécurisé.
+          Chez <strong class="text-gray-dark">Team Renov</strong>, nos électriciens interviennent partout en Île-de-France pour sécuriser, rénover ou créer votre installation électrique de A à Z.
+          Chaque intervention respecte la norme NF C 15-100 en vigueur.
+          On ne se contente pas de poser des fils : on diagnostique, on dimensionne les circuits selon vos usages réels, et on vous remet une installation propre, sûre et durable.
         </p>
+        <p class="text-gray-medium leading-relaxed">
+          Que vous rénoviez un appartement ancien, aménagez des combles ou mettiez en conformité avant une vente, on s'adapte à votre projet.
+          Un seul interlocuteur gère l'ensemble du chantier électrique, du devis à la mise sous tension.
+        </p>
+        <ul class="space-y-2 text-sm text-gray-medium">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Installation conforme NF C 15-100 — validée par le Consuel
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Matériel Legrand, Schneider Electric, Hager — zéro sous-marque
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Devis détaillé gratuit sous 48h, sans engagement
+          </li>
+        </ul>
       </div>
-      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-        Photo installation électrique
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm italic">
+        Photo : électricien Team Renov câblant un tableau électrique neuf Legrand dans un appartement rénové, gaines apparentes bien rangées
       </div>
     </div>
   </Section>
 
-  <Section title="Nos prestations électriques" bg="light">
+  <!-- SECTION 2 — Prestations détaillées -->
+  <Section title="Nos prestations électriques" subtitle="Du remplacement d'une prise à la réfection complète, on gère l'intégralité de votre chantier électrique." bg="light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
       {[
-        { title: "Tableau électrique", desc: "Installation ou remplacement de tableau aux normes avec disjoncteurs différentiels." },
-        { title: "Câblage complet", desc: "Tirage de câbles, passage de gaines et raccordements pour installations neuves ou rénovées." },
-        { title: "Prises & interrupteurs", desc: "Pose, déplacement ou ajout de points électriques selon vos besoins." },
-        { title: "Éclairage", desc: "Installation de luminaires, spots encastrés, bandeaux LED et éclairage extérieur." },
-        { title: "Mise en conformité", desc: "Diagnostic de votre installation et mise aux normes NF C 15-100." },
-        { title: "Dépannage", desc: "Intervention rapide pour pannes, courts-circuits et dysfonctionnements." },
+        {
+          title: "Tableau électrique",
+          desc: "Remplacement de votre ancien tableau à fusibles par un coffret modulaire aux normes, avec disjoncteurs différentiels 30 mA type A et AC. Chaque circuit est repéré et étiqueté pour faciliter les interventions futures.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008V17.25zm0-6h.008v.008h-.008v-.008zm6 6h.008v.008h-.008V17.25zm0-6h.008v.008h-.008v-.008z"/></svg>`
+        },
+        {
+          title: "Câblage & circuits dédiés",
+          desc: "Tirage de câbles en gaines ICTA, création de circuits dédiés pour plaque de cuisson (6 mm²), four, lave-linge, VMC et chauffage. Chaque ligne est correctement dimensionnée pour éviter les surcharges.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`
+        },
+        {
+          title: "Prises & interrupteurs",
+          desc: "Pose, déplacement ou ajout de points électriques sur mesure. Finitions soignées avec des appareillages Legrand Céliane, Mosaic ou Schneider Odace selon votre intérieur.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z"/></svg>`
+        },
+        {
+          title: "Éclairage intérieur & extérieur",
+          desc: "Spots LED encastrés, bandeaux lumineux, suspensions, appliques et éclairage de jardin. On vous conseille sur le positionnement et la température de couleur pour un confort visuel optimal.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>`
+        },
+        {
+          title: "Mise aux normes NF C 15-100",
+          desc: "Diagnostic complet de votre installation existante : points de sécurité, sections de câbles, protection différentielle, liaison équipotentielle salle de bain. On vous remet un rapport clair et on corrige chaque anomalie.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>`
+        },
+        {
+          title: "Dépannage & urgences",
+          desc: "Panne de courant, court-circuit, disjoncteur qui saute : on intervient rapidement pour identifier la cause et rétablir l'alimentation. Diagnostic sur place, réparation immédiate quand c'est possible.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L3 12.75m3.32-2.68L12 3.75l2.25 2.25M17.58 8.83l5.1 5.1m0 0l-3.32 2.68m3.32-2.68L17.25 20.25l-2.25-2.25"/></svg>`
+        },
       ].map((item) => (
         <div class="card">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-3">
+            <Fragment set:html={item.icon} />
+          </div>
           <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
           <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 3 — Cas d'usage concrets -->
+  <Section title="Vos projets, nos solutions" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-animate>
+      {[
+        {
+          title: "Rénovation d'un appartement ancien",
+          desc: "Votre appartement haussmannien a encore des fils sous moulures et un tableau à porcelaine ? On reprend toute l'installation en encastré dans les cloisons, avec un tableau modulaire neuf et des circuits conformes. Résultat : un logement sûr, sans fils apparents.",
+        },
+        {
+          title: "Mise en conformité avant vente",
+          desc: "Le diagnostic électrique de votre bien révèle des anomalies ? On corrige chaque point signalé — différentiels, prises terre, liaisons équipotentielles — pour que votre DPE et votre diagnostic soient au vert le jour de la transaction.",
+        },
+        {
+          title: "Aménagement de combles ou extension",
+          desc: "Vous créez une pièce supplémentaire ? On tire les nouveaux circuits depuis le tableau, on pose les prises, interrupteurs et points lumineux, et on s'assure que tout est dimensionné pour vos futurs équipements.",
+        },
+        {
+          title: "Local professionnel ou commerce",
+          desc: "Bureau, cabinet médical, boutique : on dimensionne l'installation selon vos équipements (serveur, climatisation, enseigne). Intervention possible en dehors des heures d'ouverture pour ne pas perturber votre activité.",
+        },
+      ].map((item) => (
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0 mt-1">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <a href="/contact" class="btn-primary">Décrivez-nous votre projet</a>
+    </div>
+  </Section>
+
+  <!-- SECTION 4 — Méthode / Déroulement -->
+  <Section title="Comment se déroule votre chantier électrique ?" subtitle="Un processus rigoureux pour que vous sachiez exactement à quoi vous attendre, du premier appel à la mise sous tension." bg="light">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" data-animate>
+      {[
+        { step: "01", title: "Diagnostic sur place", desc: "On inspecte votre installation existante, on repère les anomalies et on note vos besoins pièce par pièce. Comptez 30 à 45 minutes." },
+        { step: "02", title: "Devis détaillé", desc: "Vous recevez un devis ligne par ligne sous 48h : matériel (marque, référence), main-d'œuvre, délai. Pas de surprise à la fin." },
+        { step: "03", title: "Travaux", desc: "Saignées, passage de gaines ICTA, tirage de câbles, pose du tableau et des appareillages. On protège vos sols et meubles pendant toute l'intervention." },
+        { step: "04", title: "Tests & réception", desc: "Vérification de chaque circuit au testeur d'isolement, contrôle des différentiels, étiquetage du tableau. On vous explique le fonctionnement avant de partir." },
+      ].map((item) => (
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+            {item.step}
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+          <p class="text-sm text-gray-medium">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 5 — Pourquoi nous choisir -->
+  <Section title="Pourquoi confier votre électricité à Team Renov ?" bg="white">
+    <div class="max-w-5xl mx-auto" data-animate>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {[
+          { title: "Électriciens qualifiés", desc: "Plus de 10 ans d'expérience terrain. Nos artisans maîtrisent aussi bien la rénovation d'un studio que le câblage complet d'un local commercial." },
+          { title: "Matériel de marque", desc: "Legrand, Schneider Electric, Hager : on ne pose que du matériel certifié NF. Les références sont indiquées sur votre devis — vous pouvez vérifier." },
+          { title: "Respect des délais", desc: "Le planning est fixé dès le devis. Un remplacement de tableau prend 1 jour. Une réfection complète d'appartement, 3 à 5 jours. On s'y tient." },
+          { title: "Chantier propre", desc: "Bâchage des sols, aspiration des poussières de saignées en fin de journée, évacuation des déchets. Votre logement reste vivable pendant les travaux." },
+          { title: "Coordination multi-corps", desc: "Besoin de placo pour refermer les saignées ? De peinture pour les finitions ? On gère tout en interne, un seul devis, un seul interlocuteur." },
+          { title: "Devis transparent", desc: "Chaque ligne détaille : quantité, référence matériel, prix unitaire, main-d'œuvre. Le total ne bouge pas — sauf si vous ajoutez des prestations en cours de chantier." },
+        ].map((item) => (
+          <div class="card">
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <p class="text-lg text-gray-dark font-medium mb-4">
+          Prêt à sécuriser votre installation ?
+        </p>
+        <a href="/contact" class="btn-primary">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </Section>
+
+  <!-- SECTION 6 — FAQ SEO -->
+  <!-- FAQ schema à ajouter en JSON-LD -->
+  <Section title="Questions fréquentes sur nos travaux d'électricité" bg="light">
+    <div class="max-w-3xl mx-auto space-y-0" data-animate>
+      {[
+        {
+          q: "Combien coûte une rénovation électrique complète ?",
+          a: "Le prix dépend de la surface, du nombre de pièces et de l'état de l'existant. Pour un appartement de 50 m², comptez entre 3 500 € et 6 000 € TTC (fournitures et main-d'œuvre incluses). On détaille tout dans le devis — aucun supplément caché."
+        },
+        {
+          q: "Combien de temps durent les travaux ?",
+          a: "Un remplacement de tableau seul se fait en une journée. Une réfection complète d'un T3 prend 3 à 5 jours ouvrés. On fixe les dates dès la signature du devis et on les respecte."
+        },
+        {
+          q: "Faut-il quitter le logement pendant les travaux ?",
+          a: "Rarement. On coupe le courant par zone, pas dans tout le logement en même temps. En fin de journée, toutes les pièces non concernées sont alimentées normalement."
+        },
+        {
+          q: "Mon installation est ancienne mais fonctionne. Faut-il quand même la refaire ?",
+          a: "Si votre installation date d'avant 1991, elle ne répond probablement pas aux normes actuelles de sécurité. Le risque principal n'est pas la panne, c'est l'électrocution et l'incendie. Un diagnostic gratuit vous fixera en 30 minutes."
+        },
+        {
+          q: "Quelles garanties pour les travaux ?",
+          a: "Tous nos travaux sont couverts par l'assurance décennale. Le matériel posé bénéficie de la garantie constructeur (2 ans minimum). En cas de problème, on intervient rapidement."
+        },
+      ].map((item) => (
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer flex items-center justify-between py-4 font-semibold text-primary hover:text-accent transition-colors">
+            {item.q}
+            <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <p class="text-gray-medium text-sm leading-relaxed pb-4">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 7 — Chiffres clés / Preuve sociale -->
+  <Section title="Team Renov en chiffres" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate>
+      {[
+        { value: "10+", label: "ans d'expérience" },
+        { value: "150+", label: "chantiers réalisés" },
+        { value: "48h", label: "pour votre devis" },
+        { value: "100%", label: "assuré décennale" },
+      ].map((stat) => (
+        <div>
+          <div class="text-4xl font-extrabold text-accent mb-1">{stat.value}</div>
+          <div class="text-sm text-gray-medium">{stat.label}</div>
         </div>
       ))}
     </div>
