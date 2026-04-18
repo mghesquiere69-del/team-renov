@@ -3,25 +3,25 @@ import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
 import Section from "../../components/Section.astro";
 
 const highlights = [
-  "Grès cérame & faïence",
+  "Intérieur & extérieur",
   "Grands formats 60×120",
   "Devis gratuit sous 48h",
-  "Pose rectifiée joints fins",
+  "Terrasses & piscines",
 ];
 
 const relatedServices = [
   { title: "Plomberie", href: "/services/plomberie" },
   { title: "Enduit", href: "/services/enduit" },
-  { title: "Carrelage extérieur", href: "/services/carrelage-exterieur" },
   { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Maçonnerie", href: "/services/maconnerie" },
   { title: "Clé en main", href: "/services/cle-en-main" },
 ];
 ---
 
 <ServicePageLayout
   title="Carrelage sol & mur"
-  metaTitle="Carrelage Sol & Mur – Team Renov | Pose & Rénovation | Île-de-France"
-  metaDescription="Carreleur en Île-de-France : pose de grès cérame, faïence, mosaïque, grands formats. Cuisine, salle de bain, séjour. Devis gratuit 48h."
+  metaTitle="Carrelage Intérieur & Extérieur – Team Renov | Pose & Rénovation | Île-de-France"
+  metaDescription="Carreleur en Île-de-France : pose de grès cérame, faïence, mosaïque, terrasses, allées et abords de piscine. Devis gratuit 48h."
   category="Travaux Intérieurs"
   categoryHref="/services#interieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z"/></svg>`}
@@ -246,6 +246,67 @@ const relatedServices = [
           <div class="text-sm text-gray-medium">{stat.label}</div>
         </div>
       ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 8 — Carrelage extérieur -->
+  <Section title="Carrelage extérieur : terrasses, allées & abords de piscine" bg="light" id="exterieur">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10" data-animate>
+      <div class="space-y-4">
+        <p class="text-gray-medium leading-relaxed">
+          Le carrelage extérieur apporte esthétique et durabilité à vos terrasses, allées de jardin
+          et abords de piscine. Nos carreleurs sélectionnent des matériaux résistants au gel (classés
+          UPEC et norme ISO 10545-12), aux UV et aux chocs thermiques.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Nous posons du grès cérame extérieur 20 mm, des dalles sur plots réglables, des pavés et
+          de la pierre naturelle. Chaque pose intègre les pentes d'évacuation des eaux (1,5 % minimum)
+          et des revêtements classés R11 ou R12 pour une sécurité antidérapante.
+        </p>
+        <p class="text-gray-medium leading-relaxed">
+          Terrasse de plain-pied, terrasse surélevée sur plots, plage de piscine, escalier extérieur,
+          entrée de garage : on intervient sur tous les supports en Île-de-France.
+        </p>
+      </div>
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm italic">
+        Photo : terrasse carrelée en grès cérame grand format, mobilier de jardin, vue jardin ensoleillé
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10" data-animate>
+      {[
+        {
+          title: "Terrasses",
+          desc: "Pose de carrelage ou dalles sur chape ou sur plots pour terrasses de plain-pied ou surélevées. Grès cérame 20 mm, pierre reconstituée ou travertin."
+        },
+        {
+          title: "Allées & chemins",
+          desc: "Pavage et dallage d'allées de jardin, entrées de garage et chemins piétons. Pose sur lit de sable stabilisé ou sur chape béton selon le trafic prévu."
+        },
+        {
+          title: "Abords de piscine",
+          desc: "Revêtements antidérapants R11/R12, margelles et plages de piscine en carrelage ou pierre naturelle. Résistants au chlore et aux UV."
+        },
+        {
+          title: "Escaliers extérieurs",
+          desc: "Habillage d'escaliers en carrelage extérieur résistant avec nez de marche antidérapant. Découpes précises et joints souples en périphérie."
+        },
+        {
+          title: "Dalles sur plots",
+          desc: "Pose de dalles sur plots réglables pour terrasses ventilées sans chape. Idéal pour les étanchéités existantes, les toits-terrasses et les balcons."
+        },
+        {
+          title: "Joints & étanchéité extérieure",
+          desc: "Joints résistants aux intempéries et au gel, traitement hydrofuge des surfaces en pierre naturelle. Joints de dilatation tous les 6 m² maximum."
+        },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <a href="/contact" class="btn-primary">Devis carrelage extérieur gratuit</a>
     </div>
   </Section>
 </ServicePageLayout>
