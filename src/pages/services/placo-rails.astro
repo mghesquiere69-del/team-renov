@@ -61,20 +61,18 @@ const relatedServices = [
       </div>
 
       <!-- Slider Avant / Après -->
-      <div class="ba-slider" data-animate>
+      <div class="ba-slider">
         <div class="ba-slider__container">
           <img
             src="/images/services/placo-rails-apres.jpg"
             alt="Pièce terminée après pose de placo, cloisons et faux plafonds"
             class="ba-slider__img ba-slider__img--after"
-            loading="lazy"
           />
           <div class="ba-slider__overlay">
             <img
               src="/images/services/placo-rails-avant.jpg"
               alt="Pièce brute avant pose du placo : murs non isolés"
               class="ba-slider__img ba-slider__img--before"
-              loading="lazy"
             />
           </div>
           <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparer avant et après" />
@@ -246,18 +244,15 @@ const relatedServices = [
   .ba-slider__overlay {
     position: absolute;
     inset: 0;
-    width: 50%;
-    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
     z-index: 1;
   }
 
   .ba-slider__img--before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    max-width: none;
+    display: block;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   .ba-slider__range {
@@ -336,7 +331,7 @@ const relatedServices = [
 
     function update(value: number) {
       const pct = value + '%';
-      overlay.style.width = pct;
+      overlay.style.clipPath = 'inset(0 ' + (100 - value) + '% 0 0)';
       handle.style.left = pct;
     }
 
