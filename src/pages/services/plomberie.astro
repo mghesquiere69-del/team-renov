@@ -3,10 +3,10 @@ import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
 import Section from "../../components/Section.astro";
 
 const highlights = [
-  "Tuyauterie cuivre & PER",
-  "Sanitaires",
-  "Chauffage",
-  "Dépannage urgent",
+  "Cuivre, PER & multicouche",
+  "Conforme DTU 60.1",
+  "Devis gratuit sous 48h",
+  "Intervention rapide",
 ];
 
 const relatedServices = [
@@ -14,52 +14,238 @@ const relatedServices = [
   { title: "Électricité", href: "/services/electricite" },
   { title: "Rénovation complète", href: "/services/renovation-complete" },
   { title: "Placo & Rails", href: "/services/placo-rails" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
 ];
 ---
 
 <ServicePageLayout
   title="Plomberie"
-  metaTitle="Plomberie – Team Renov | Installation & Rénovation Sanitaires"
-  metaDescription="Installation et rénovation de plomberie : tuyauterie, sanitaires, chauffage. Plombiers qualifiés, devis gratuit en 48h."
+  metaTitle="Plomberie – Team Renov | Installation & Rénovation | Île-de-France"
+  metaDescription="Plombier en Île-de-France : tuyauterie cuivre & PER, sanitaires, chauffe-eau, chauffage. Travaux conformes DTU, devis gratuit 48h."
   category="Travaux Intérieurs"
   categoryHref="/services#interieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`}
   highlights={highlights}
   relatedServices={relatedServices}
 >
-  <Section title="Des installations fiables et durables" bg="white">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
-      <div class="space-y-4">
+  <!-- SECTION 1 — Accroche : Problème → Agitation → Solution -->
+  <Section title="Fuite, tuyau vétuste, salle de bain à refaire ? On s'en charge." bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-animate>
+      <div class="space-y-5">
         <p class="text-gray-medium leading-relaxed">
-          La plomberie est un élément vital de votre habitation. Nos plombiers qualifiés
-          interviennent sur l'ensemble de vos installations : alimentation en eau, évacuations,
-          sanitaires et chauffage.
+          Un joint qui suinte, une pression d'eau qui faiblit, un ballon d'eau chaude qui rend l'âme en plein hiver…
+          <strong class="text-gray-dark">Les problèmes de plomberie n'attendent jamais le bon moment.</strong>
+          Et quand on reporte, les dégâts s'aggravent : taches d'humidité, moisissures, factures d'eau qui explosent.
         </p>
         <p class="text-gray-medium leading-relaxed">
-          Que ce soit pour une rénovation complète de salle de bain, le remplacement d'un
-          chauffe-eau ou la création d'un réseau d'alimentation pour votre nouvelle cuisine,
-          nous garantissons des installations conformes, étanches et pérennes.
+          Chez <strong class="text-gray-dark">Team Renov</strong>, nos plombiers interviennent sur tout le réseau :
+          alimentation en eau froide et chaude, évacuations, sanitaires, chauffage.
+          On travaille en <strong class="text-gray-dark">cuivre, PER et multicouche</strong> selon les contraintes du chantier,
+          et chaque installation est réalisée dans le respect du <strong class="text-gray-dark">DTU 60.1</strong> — la norme qui garantit l'étanchéité et la durabilité de vos canalisations.
         </p>
+        <p class="text-gray-medium leading-relaxed">
+          Que ce soit pour créer un réseau complet dans un appartement neuf, rénover une salle de bain vieillissante ou remplacer un chauffe-eau en urgence,
+          on intervient partout en Île-de-France avec du matériel professionnel et des pièces de qualité.
+        </p>
+        <ul class="space-y-2 text-sm text-gray-medium">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Raccords sertis ou brasés — zéro soudure à l'étain sur les réseaux d'eau potable
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Marques pro : Grohe, Hansgrohe, Geberit, Atlantic, Thermor
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Essai sous pression systématique avant mise en service
+          </li>
+        </ul>
       </div>
-      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-        Photo travaux plomberie
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm italic">
+        Photo : plombier Team Renov réalisant un raccordement en cuivre sous évier de cuisine, outillage professionnel visible
       </div>
     </div>
   </Section>
 
-  <Section title="Nos prestations plomberie" bg="light">
+  <!-- SECTION 2 — Prestations détaillées -->
+  <Section title="Nos prestations plomberie" subtitle="Du simple remplacement de robinet à la création complète d'un réseau, on couvre tous vos besoins." bg="light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
       {[
-        { title: "Tuyauterie", desc: "Installation et remplacement de canalisations en cuivre, PER ou multicouche." },
-        { title: "Sanitaires", desc: "Pose de WC, lavabos, baignoires, douches et robinetterie de qualité." },
-        { title: "Chauffe-eau", desc: "Installation et remplacement de chauffe-eau électriques, gaz ou thermodynamiques." },
-        { title: "Chauffage", desc: "Pose de radiateurs, planchers chauffants et raccordement de systèmes de chauffage." },
-        { title: "Évacuations", desc: "Création et réfection des réseaux d'évacuation d'eaux usées et eaux pluviales." },
-        { title: "Dépannage", desc: "Intervention rapide pour fuites, bouchons, pannes de chauffe-eau et urgences." },
+        {
+          title: "Tuyauterie & canalisations",
+          desc: "Création, remplacement et mise en conformité de réseaux d'alimentation en eau. On travaille en cuivre brasé, PER gainé ou multicouche selon l'accès et les contraintes. Chaque réseau est testé sous pression avant mise en service.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z"/></svg>`
+        },
+        {
+          title: "Sanitaires complets",
+          desc: "Pose de WC suspendus (bâti-support Geberit), lavabos, vasques, baignoires, receveurs de douche extra-plats. Raccordement eau chaude/froide et évacuation inclus. On gère aussi la robinetterie (mitigeurs, thermostatiques).",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg>`
+        },
+        {
+          title: "Chauffe-eau & ballons",
+          desc: "Remplacement de ballons électriques (100L à 300L), installation de chauffe-eau thermodynamiques (éligibles aides), pose murale ou sur socle. On assure le raccordement hydraulique, électrique et l'évacuation des condensats.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/></svg>`
+        },
+        {
+          title: "Chauffage & radiateurs",
+          desc: "Pose de radiateurs en acier ou fonte, planchers chauffants hydrauliques, raccordement sur chaudière existante. On dimensionne chaque émetteur selon le volume de la pièce pour un confort thermique optimal.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636"/></svg>`
+        },
+        {
+          title: "Évacuations & colonnes",
+          desc: "Création et réfection des réseaux d'évacuation : PVC diamètre 32 à 100, pentes conformes (1 cm/m minimum), raccordement sur colonne d'immeuble. On traite aussi les problèmes de refoulement et de mauvaises odeurs.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>`
+        },
+        {
+          title: "Dépannage & urgences",
+          desc: "Fuite sous pression, WC bouché, chauffe-eau en panne : on intervient rapidement pour stopper les dégâts, diagnostiquer le problème et réparer. Pièces de remplacement courantes disponibles en stock véhicule.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L3 12.75m3.32-2.68L12 3.75l2.25 2.25M17.58 8.83l5.1 5.1m0 0l-3.32 2.68m3.32-2.68L17.25 20.25l-2.25-2.25"/></svg>`
+        },
       ].map((item) => (
         <div class="card">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-3">
+            <Fragment set:html={item.icon} />
+          </div>
           <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
           <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 3 — Cas d'usage concrets -->
+  <Section title="Vos projets plomberie, nos solutions" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-animate>
+      {[
+        {
+          title: "Rénovation complète de salle de bain",
+          desc: "On reprend tout le réseau : dépose de l'ancienne baignoire, création des arrivées/évacuations pour une douche à l'italienne, pose du receveur, raccordement de la robinetterie thermostatique et du meuble vasque. On coordonne avec nos carreleurs et nos plaquistes pour un résultat clé en main.",
+        },
+        {
+          title: "Remplacement de chauffe-eau vétuste",
+          desc: "Votre ballon a plus de 10 ans, il coule ou ne chauffe plus ? On le dépose, on installe un modèle neuf (électrique, thermodynamique) dimensionné à votre consommation, et on repart le jour même. L'ancien appareil est évacué par nos soins.",
+        },
+        {
+          title: "Création de réseau pour cuisine neuve",
+          desc: "Nouvelle cuisine avec îlot central, lave-vaisselle déporté, robinet douchette ? On tire les arrivées d'eau chaude/froide et les évacuations depuis les attentes existantes. PER gainé en passage de dalle ou en cloison, raccords invisibles.",
+        },
+        {
+          title: "Mise en conformité d'un ancien logement",
+          desc: "Tuyaux en plomb, canalisations en acier galvanisé rouillées, raccords en plomb interdits… On remplace tout par du cuivre ou du PER certifié ACS, avec vannes d'arrêt individuelles par appareil. Indispensable avant une remise en location.",
+        },
+      ].map((item) => (
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0 mt-1">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <a href="/contact" class="btn-primary">Décrivez-nous votre projet</a>
+    </div>
+  </Section>
+
+  <!-- SECTION 4 — Méthode -->
+  <Section title="Comment se déroule votre chantier plomberie ?" subtitle="Un process rodé pour des installations fiables, sans mauvaise surprise." bg="light">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" data-animate>
+      {[
+        { step: "01", title: "Diagnostic & chiffrage", desc: "On vient sur place, on examine le réseau existant, on identifie les contraintes (accès, matériaux, normes). Devis détaillé sous 48h avec plan de passage si nécessaire." },
+        { step: "02", title: "Dépose & préparation", desc: "Coupure d'eau localisée, dépose de l'ancien réseau ou des appareils. Protection des sols et des meubles. Percement des cloisons et passages de gaines." },
+        { step: "03", title: "Installation & raccordement", desc: "Pose des canalisations, raccordement des appareils sanitaires, montage de la robinetterie. Chaque brasure et sertissage est contrôlé visuellement." },
+        { step: "04", title: "Essai & mise en service", desc: "Test d'étanchéité sous pression (10 bars pendant 30 min). Vérification du débit, de la température et de l'évacuation. Nettoyage complet du chantier." },
+      ].map((item) => (
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+            {item.step}
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+          <p class="text-sm text-gray-medium">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 5 — Pourquoi nous choisir -->
+  <Section title="Pourquoi choisir Team Renov pour votre plomberie ?" bg="white">
+    <div class="max-w-5xl mx-auto" data-animate>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {[
+          { title: "Plombiers expérimentés", desc: "Plus de 10 ans de métier. Nos artisans maîtrisent le cuivre brasé, le PER serti et le multicouche. Chaque installation est réalisée proprement, sans raccord apparent." },
+          { title: "Matériaux de marque", desc: "Grohe, Hansgrohe, Geberit pour la robinetterie et les sanitaires. Atlantic, Thermor pour les chauffe-eau. Les références figurent sur votre devis — pas de sous-marques." },
+          { title: "Conformité DTU", desc: "Chaque installation respecte le DTU 60.1 (plomberie sanitaire) et le DTU 60.11 (évacuations). Pentes, diamètres, ventilation primaire : rien n'est laissé au hasard." },
+          { title: "Essai sous pression", desc: "Avant de refermer les cloisons, on teste systématiquement le réseau à 10 bars pendant 30 minutes. C'est la garantie zéro fuite à la mise en service." },
+          { title: "Coordination intégrée", desc: "Besoin de carrelage après la plomberie, ou d'électricité en parallèle ? On gère tout en interne. Un seul interlocuteur, un seul planning, zéro perte de temps." },
+          { title: "Devis transparent", desc: "Chaque poste est détaillé : fournitures (marques et références), main-d'œuvre, dépose de l'existant. Vous savez exactement ce que vous payez, sans surprise à la fin." },
+        ].map((item) => (
+          <div class="card">
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <p class="text-lg text-gray-dark font-medium mb-4">
+          Un projet plomberie en tête ? On en discute.
+        </p>
+        <a href="/contact" class="btn-primary">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </Section>
+
+  <!-- SECTION 6 — FAQ SEO -->
+  <Section title="Questions fréquentes sur la plomberie" bg="light">
+    <div class="max-w-3xl mx-auto space-y-0" data-animate>
+      {[
+        {
+          q: "Combien coûte une rénovation de plomberie complète ?",
+          a: "Le budget dépend de la surface et de la complexité du réseau. Pour une salle de bain complète (sanitaires + tuyauterie), comptez entre 3 000 € et 7 000 € TTC. Pour un appartement entier (cuisine + salle de bain + WC), on se situe entre 5 000 € et 12 000 €. On détaille tout dans le devis."
+        },
+        {
+          q: "Cuivre ou PER, lequel choisir ?",
+          a: "Le cuivre est plus durable (50 ans+), résistant au chlore et au calcaire, mais plus cher à poser. Le PER est plus rapide à installer, moins coûteux et idéal en rénovation quand les passages sont contraints. On vous conseille le meilleur choix selon votre projet."
+        },
+        {
+          q: "Combien de temps durent les travaux de plomberie ?",
+          a: "Un remplacement de chauffe-eau se fait en une demi-journée. Une salle de bain complète (dépose + repose tuyauterie + sanitaires) demande 3 à 5 jours. Pour un appartement entier, comptez 1 à 2 semaines selon l'ampleur. On fixe les délais dès le devis."
+        },
+        {
+          q: "Faut-il couper l'eau pendant toute la durée des travaux ?",
+          a: "Non. On installe des vannes d'arrêt provisoires pour limiter les coupures aux phases de raccordement. En général, l'eau est coupée quelques heures par jour maximum, et on vous prévient à l'avance."
+        },
+        {
+          q: "Intervenez-vous pour les dégâts des eaux ?",
+          a: "Oui. On localise la fuite, on répare le réseau, et on peut aussi refaire les parties endommagées (placo, peinture, carrelage). On fournit un rapport d'intervention pour votre assurance."
+        },
+      ].map((item) => (
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer flex items-center justify-between py-4 font-semibold text-primary hover:text-accent transition-colors">
+            {item.q}
+            <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <p class="text-gray-medium text-sm leading-relaxed pb-4">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 7 — Chiffres clés -->
+  <Section title="Team Renov en chiffres" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate>
+      {[
+        { value: "10+", label: "ans d'expérience" },
+        { value: "150+", label: "chantiers réalisés" },
+        { value: "48h", label: "pour votre devis" },
+        { value: "100%", label: "assuré décennale" },
+      ].map((stat) => (
+        <div>
+          <div class="text-4xl font-extrabold text-accent mb-1">{stat.value}</div>
+          <div class="text-sm text-gray-medium">{stat.label}</div>
         </div>
       ))}
     </div>
