@@ -3,10 +3,10 @@ import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
 import Section from "../../components/Section.astro";
 
 const highlights = [
-  "Sol & mur",
-  "Faïence & mosaïque",
-  "Grands formats",
-  "Pose rectifiée",
+  "Grès cérame & faïence",
+  "Grands formats 60×120",
+  "Devis gratuit sous 48h",
+  "Pose rectifiée joints fins",
 ];
 
 const relatedServices = [
@@ -14,52 +14,236 @@ const relatedServices = [
   { title: "Enduit", href: "/services/enduit" },
   { title: "Carrelage extérieur", href: "/services/carrelage-exterieur" },
   { title: "Rénovation complète", href: "/services/renovation-complete" },
+  { title: "Clé en main", href: "/services/cle-en-main" },
 ];
 ---
 
 <ServicePageLayout
   title="Carrelage sol & mur"
-  metaTitle="Carrelage Sol & Mur – Team Renov | Pose de Carrelage & Faïence"
-  metaDescription="Pose de carrelage, faïence et mosaïque pour cuisines, salles de bain et pièces de vie. Carreleurs qualifiés, devis gratuit en 48h."
+  metaTitle="Carrelage Sol & Mur – Team Renov | Pose & Rénovation | Île-de-France"
+  metaDescription="Carreleur en Île-de-France : pose de grès cérame, faïence, mosaïque, grands formats. Cuisine, salle de bain, séjour. Devis gratuit 48h."
   category="Travaux Intérieurs"
   categoryHref="/services#interieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z"/></svg>`}
   highlights={highlights}
   relatedServices={relatedServices}
 >
-  <Section title="L'art du carrelage" bg="white">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
-      <div class="space-y-4">
+  <!-- SECTION 1 — Accroche : Problème → Agitation → Solution -->
+  <Section title="Un sol fissuré, une faïence datée ? On transforme vos pièces." bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" data-animate>
+      <div class="space-y-5">
         <p class="text-gray-medium leading-relaxed">
-          Le carrelage est bien plus qu'un revêtement : c'est un élément central de votre
-          décoration intérieure. Nos carreleurs expérimentés maîtrisent la pose de tous types
-          de carreaux, des petits formats traditionnels aux grands formats modernes.
+          Carrelage décollé dans la salle de bain, joints noircis en cuisine, sol d'entrée rayé qui donne un air vieillot à tout l'appartement…
+          <strong class="text-gray-dark">Le carrelage, c'est ce qu'on voit en premier et ce qu'on foule chaque jour.</strong>
+          Quand il est abîmé ou mal posé, c'est tout l'intérieur qui en pâtit.
         </p>
         <p class="text-gray-medium leading-relaxed">
-          Cuisine, salle de bain, séjour ou entrée : nous vous conseillons sur le choix des
-          matériaux (grès cérame, faïence, mosaïque, pierre naturelle) et réalisons une pose
-          soignée avec des joints réguliers et durables.
+          Chez <strong class="text-gray-dark">Team Renov</strong>, nos carreleurs posent aussi bien les <strong class="text-gray-dark">petits formats mosaïque</strong> que les <strong class="text-gray-dark">grands carreaux 60×120 en pose rectifiée</strong>.
+          Chaque chantier commence par une préparation rigoureuse du support — ragréage, primaire d'accrochage, étanchéité SPEC si nécessaire — car un carreau parfaitement posé, c'est d'abord un sol parfaitement plan.
         </p>
+        <p class="text-gray-medium leading-relaxed">
+          On intervient en Île-de-France sur toutes les pièces : salle de bain, cuisine, séjour, entrée, buanderie.
+          Grès cérame, faïence, pierre naturelle, carreaux de ciment : on maîtrise tous les matériaux et toutes les techniques de pose.
+        </p>
+        <ul class="space-y-2 text-sm text-gray-medium">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Double encollage systématique sur grands formats — zéro sonnette creuse
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Colles et joints Weber, Mapei, Litokol — marques pro exclusivement
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Croisillons autonivelants pour une planéité parfaite
+          </li>
+        </ul>
       </div>
-      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-        Photo pose de carrelage
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm italic">
+        Photo : carreleur Team Renov posant un grand format grès cérame au sol, croisillons autonivelants visibles, pièce lumineuse
       </div>
     </div>
   </Section>
 
-  <Section title="Nos prestations carrelage" bg="light">
+  <!-- SECTION 2 — Prestations détaillées -->
+  <Section title="Nos prestations carrelage" subtitle="Du ragréage du support aux finitions de joints, on gère chaque étape de A à Z." bg="light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
       {[
-        { title: "Carrelage de sol", desc: "Pose collée ou scellée de carrelage pour toutes pièces de vie, y compris grands formats." },
-        { title: "Faïence murale", desc: "Revêtement mural en faïence pour cuisines et salles de bain, avec finitions soignées." },
-        { title: "Mosaïque", desc: "Pose de mosaïque décorative pour crédences, douches à l'italienne et éléments design." },
-        { title: "Chape & ragréage", desc: "Préparation du support avec chape et ragréage pour garantir une pose parfaite." },
-        { title: "Remplacement partiel", desc: "Dépose et remplacement de carreaux cassés ou abîmés à l'identique." },
-        { title: "Joints & étanchéité", desc: "Réalisation de joints résistants et application de traitements hydrofuges." },
+        {
+          title: "Carrelage de sol",
+          desc: "Pose collée de grès cérame, pierre naturelle ou carreaux de ciment sur chape ou ancien carrelage. Double encollage sur les formats supérieurs à 45×45. Croisillons autonivelants pour une planéité irréprochable, joints fins 2 mm ou larges selon le style.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z"/></svg>`
+        },
+        {
+          title: "Faïence murale",
+          desc: "Revêtement mural pour cuisines et salles de bain. Pose en pleine hauteur, crédence de cuisine, habillage de baignoire ou de douche. Découpes précises à la carrelette et au disque diamant pour des angles nets.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75"/></svg>`
+        },
+        {
+          title: "Mosaïque & décors",
+          desc: "Pose de mosaïque en pâte de verre, grès ou pierre naturelle. Idéale pour les niches de douche, crédences design, soubassements et éléments décoratifs. On travaille aussi les listels et frises pour des finitions sur mesure.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>`
+        },
+        {
+          title: "Chape & ragréage",
+          desc: "Préparation indispensable du support avant la pose. Ragréage autolissant P3 pour rattraper jusqu'à 10 mm de dénivelé, chape allégée si le plancher ne supporte pas le poids. Primaire d'accrochage systématique.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>`
+        },
+        {
+          title: "Douche à l'italienne",
+          desc: "Création complète : receveur extra-plat ou receveur à carreler, étanchéité SPEC sous carrelage (système d'étanchéité liquide + bandes), siphon de sol, pente conforme. On coordonne avec nos plombiers pour le raccordement.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+        },
+        {
+          title: "Joints & étanchéité",
+          desc: "Joints époxy pour les pièces humides (douche, plan de travail), joints ciment pour les sols secs. Application de traitement hydrofuge sur pierre naturelle et carreaux de ciment. Joints de dilatation périphériques systématiques.",
+          icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L3 12.75m3.32-2.68L12 3.75l2.25 2.25M17.58 8.83l5.1 5.1m0 0l-3.32 2.68m3.32-2.68L17.25 20.25l-2.25-2.25"/></svg>`
+        },
       ].map((item) => (
         <div class="card">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-3">
+            <Fragment set:html={item.icon} />
+          </div>
           <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
           <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 3 — Cas d'usage concrets -->
+  <Section title="Vos projets carrelage, nos solutions" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-animate>
+      {[
+        {
+          title: "Rénovation de salle de bain complète",
+          desc: "Dépose de l'ancien carrelage, ragréage, étanchéité SPEC, pose de faïence en pleine hauteur et carrelage au sol. On crée aussi votre douche à l'italienne avec receveur à carreler et siphon de sol. Coordination avec nos plombiers incluse.",
+        },
+        {
+          title: "Crédence et sol de cuisine",
+          desc: "Carrelage métro, grès cérame effet bois, carreaux de ciment ou grand format : on s'adapte à votre style. La crédence est posée avec des découpes précises autour des prises et interrupteurs. Le sol est traité pour résister aux taches et à l'humidité.",
+        },
+        {
+          title: "Pose de grand format en séjour",
+          desc: "Les carreaux 60×120 ou 80×80 agrandissent visuellement les espaces. Pose en double encollage avec croisillons autonivelants, joints fins 2 mm couleur assortie. On gère le calepinage pour optimiser les coupes et les raccords.",
+        },
+        {
+          title: "Remplacement de carreaux cassés",
+          desc: "Un carreau fissuré ou décollé ? On le dépose proprement, on prépare le support et on repose un carreau identique ou approchant. Joints refaits à l'identique, raccord invisible. Intervention ponctuelle en une demi-journée.",
+        },
+      ].map((item) => (
+        <div class="flex gap-4">
+          <div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center shrink-0 mt-1">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <a href="/contact" class="btn-primary">Décrivez-nous votre projet</a>
+    </div>
+  </Section>
+
+  <!-- SECTION 4 — Méthode -->
+  <Section title="Comment se déroule votre chantier carrelage ?" subtitle="De la préparation du support à la finition des joints, chaque étape est maîtrisée." bg="light">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" data-animate>
+      {[
+        { step: "01", title: "Visite & calepinage", desc: "On mesure chaque surface, on définit le sens de pose, les coupes et le calepinage. On vous conseille sur le format, le matériau et la couleur des joints. Devis sous 48h." },
+        { step: "02", title: "Préparation du support", desc: "Dépose de l'ancien revêtement si nécessaire, ragréage autolissant, primaire d'accrochage, étanchéité SPEC en pièces humides. Le support doit être parfaitement plan et propre." },
+        { step: "03", title: "Pose & découpes", desc: "Encollage (simple ou double selon le format), pose des carreaux avec croisillons autonivelants, découpes à la carrelette et au disque diamant. Contrôle de niveau en continu." },
+        { step: "04", title: "Joints & nettoyage", desc: "Application des joints (ciment ou époxy), nettoyage au fur et à mesure, joint de dilatation périphérique au silicone. Nettoyage final et réception du chantier." },
+      ].map((item) => (
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center mx-auto mb-3 text-lg font-bold">
+            {item.step}
+          </div>
+          <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+          <p class="text-sm text-gray-medium">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 5 — Pourquoi nous choisir -->
+  <Section title="Pourquoi choisir Team Renov pour votre carrelage ?" bg="white">
+    <div class="max-w-5xl mx-auto" data-animate>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {[
+          { title: "Carreleurs expérimentés", desc: "Plus de 10 ans de métier. Nos artisans posent aussi bien du petit format mosaïque que du grand format 60×120. Chaque carreau est posé avec précision, sans sonnette creuse." },
+          { title: "Matériaux de marque", desc: "Colles Weber, Mapei ou Litokol, joints Starlike ou Keracolor. On ne travaille qu'avec des produits professionnels pour une tenue dans le temps garantie." },
+          { title: "Double encollage", desc: "Sur tous les formats supérieurs à 45×45, on pratique le double encollage (mur/sol + dos du carreau). C'est la garantie d'une adhérence totale et d'aucune sonnette creuse." },
+          { title: "Étanchéité SPEC", desc: "En pièces humides (douches, salles de bain), on applique un système d'étanchéité liquide avec bandes de renfort avant la pose. Conforme aux normes DTU, zéro infiltration." },
+          { title: "Coordination intégrée", desc: "Plomberie, électricité, enduit : on coordonne tous les corps de métier en interne. Un seul interlocuteur, un seul planning, des travaux fluides sans temps mort." },
+          { title: "Devis au m² détaillé", desc: "Chaque poste est chiffré : dépose, ragréage, fourniture carrelage, pose, joints. Les marques et références sont indiquées — vous savez exactement ce que vous payez." },
+        ].map((item) => (
+          <div class="card">
+            <h3 class="text-base font-semibold text-primary mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <p class="text-lg text-gray-dark font-medium mb-4">
+          Envie d'un nouveau carrelage ? Parlons-en.
+        </p>
+        <a href="/contact" class="btn-primary">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </Section>
+
+  <!-- SECTION 6 — FAQ SEO -->
+  <Section title="Questions fréquentes sur le carrelage" bg="light">
+    <div class="max-w-3xl mx-auto space-y-0" data-animate>
+      {[
+        {
+          q: "Combien coûte la pose de carrelage au m² ?",
+          a: "En moyenne, la pose seule coûte entre 30 € et 55 € TTC/m² selon le format et la complexité (ragréage, étanchéité, découpes). En ajoutant la fourniture du carrelage, comptez de 50 € à 120 € TTC/m² tout compris. On détaille chaque poste dans le devis."
+        },
+        {
+          q: "Peut-on poser du carrelage sur un ancien carrelage ?",
+          a: "Oui, à condition que l'ancien carrelage soit bien adhérent, plan et propre. On applique un primaire d'accrochage spécial (type Omnibond) et on pose par-dessus. Cela évite la dépose et réduit les coûts. Si l'ancien est décollé ou fissuré, la dépose est recommandée."
+        },
+        {
+          q: "Quel carrelage choisir pour une salle de bain ?",
+          a: "Grès cérame pleine masse classé R10 minimum (antidérapant) pour le sol, et faïence ou grès cérame émaillé pour les murs. Pour une douche à l'italienne, on recommande du format 30×60 ou mosaïque avec joints époxy. On vous conseille sur place."
+        },
+        {
+          q: "Combien de temps pour carreler une salle de bain ?",
+          a: "Pour une salle de bain standard (sol + murs + douche), comptez 4 à 6 jours ouvrés : 1 jour de préparation/étanchéité, 2-3 jours de pose, 1 jour de joints et finitions. On fixe les délais précis dès le devis."
+        },
+        {
+          q: "Quelle différence entre joints ciment et joints époxy ?",
+          a: "Les joints ciment sont les plus courants : économiques, faciles à poser, adaptés aux sols secs. Les joints époxy (type Starlike) sont imperméables, anti-moisissures et ultra-résistants : idéaux pour les douches, crédences de cuisine et piscines. Plus chers, mais durables."
+        },
+      ].map((item) => (
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer flex items-center justify-between py-4 font-semibold text-primary hover:text-accent transition-colors">
+            {item.q}
+            <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+          </summary>
+          <p class="text-gray-medium text-sm leading-relaxed pb-4">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </Section>
+
+  <!-- SECTION 7 — Chiffres clés -->
+  <Section title="Team Renov en chiffres" bg="white">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate>
+      {[
+        { value: "10+", label: "ans d'expérience" },
+        { value: "150+", label: "chantiers réalisés" },
+        { value: "48h", label: "pour votre devis" },
+        { value: "100%", label: "assuré décennale" },
+      ].map((stat) => (
+        <div>
+          <div class="text-4xl font-extrabold text-accent mb-1">{stat.value}</div>
+          <div class="text-sm text-gray-medium">{stat.label}</div>
         </div>
       ))}
     </div>
