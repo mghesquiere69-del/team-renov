@@ -6,7 +6,7 @@ const highlights = [
   "Construction & extension",
   "Murs de soutènement",
   "Réparation de structures",
-  "Parpaing, brique & pierre",
+  "Devis gratuit sous 48h",
 ];
 
 const relatedServices = [
@@ -20,48 +20,293 @@ const relatedServices = [
 <ServicePageLayout
   title="Maçonnerie"
   metaTitle="Maçonnerie – Team Renov | Construction, Réparation & Renforcement"
-  metaDescription="Travaux de maçonnerie : construction, réparation et renforcement de structures. Maçons qualifiés, devis gratuit en 48h."
+  metaDescription="Travaux de maçonnerie en Île-de-France : construction de murs, extensions, fondations, réparation de structures. Maçons qualifiés, devis gratuit en 48h."
   category="Travaux Extérieurs"
   categoryHref="/services#exterieurs"
   icon={`<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg>`}
   highlights={highlights}
   relatedServices={relatedServices}
 >
-  <Section title="Des fondations solides pour vos projets" bg="white">
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10" data-animate>
+
+  <!-- ════════ SECTION 1 — Accroche PAS ════════ -->
+  <Section title="Votre maçonnerie mérite des fondations solides" bg="white">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10" data-animate>
       <div class="space-y-4">
         <p class="text-gray-medium leading-relaxed">
-          La maçonnerie est le fondement de tout projet de construction ou de rénovation
-          extérieure. Nos maçons expérimentés interviennent sur tous types d'ouvrages :
-          construction de murs, murets, piliers, escaliers extérieurs et extensions.
+          Fissures dans le mur porteur, muret de clôture qui penche, fondation qui s'affaisse ?
+          Ces désordres ne sont jamais cosmétiques. Ils signalent un problème structurel qui
+          s'aggrave avec le temps, les intempéries et le gel.
         </p>
         <p class="text-gray-medium leading-relaxed">
-          Nous travaillons le parpaing, la brique, la pierre naturelle et le béton armé
-          pour des réalisations durables et conformes aux règles de l'art. Chaque ouvrage
-          est réalisé avec rigueur pour garantir solidité et longévité.
+          Sans intervention, une fissure de 2 mm devient un passage pour l'eau, fragilise l'armature
+          béton et peut compromettre la stabilité complète de l'ouvrage. Le coût de réparation
+          double chaque année d'attente. Sur un mur de soutènement, le risque d'effondrement
+          engage votre responsabilité civile.
         </p>
+        <p class="text-gray-medium leading-relaxed">
+          Chez Team Renov, nos maçons interviennent en Île-de-France depuis plus de 10 ans
+          sur tous types d'ouvrages : construction neuve, réparation, renforcement et extension.
+          Du parpaing à la pierre de taille, du béton armé à la brique, chaque chantier est
+          exécuté dans les règles de l'art avec des matériaux certifiés.
+        </p>
+        <ul class="space-y-3 pt-2">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            <span class="text-gray-dark">Diagnostic structurel gratuit avant chaque chantier</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            <span class="text-gray-dark">Assurance décennale sur tous les ouvrages de gros œuvre</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            <span class="text-gray-dark">Coordination complète si plusieurs corps de métier sont nécessaires</span>
+          </li>
+        </ul>
       </div>
-      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-        Photo chantier maçonnerie
+      <div class="bg-gray-200 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400 text-sm italic">
+        Photo : maçon Team Renov montant un mur en parpaing avec règle de niveau, chantier extérieur en Île-de-France
       </div>
     </div>
   </Section>
 
-  <Section title="Nos prestations maçonnerie" bg="light">
+  <!-- ════════ SECTION 2 — Prestations (6 cards) ════════ -->
+  <Section title="Nos prestations maçonnerie en Île-de-France" subtitle="Du gros œuvre à la finition, nous couvrons l'ensemble des travaux de maçonnerie pour votre habitat." bg="light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
       {[
-        { title: "Murs & clôtures", desc: "Construction de murs de clôture, murets et piliers en parpaing, brique ou pierre." },
-        { title: "Murs de soutènement", desc: "Ouvrages de soutènement pour terrains en pente avec drainage et étanchéité." },
-        { title: "Fondations", desc: "Coulage de fondations, semelles filantes et dalles béton pour constructions neuves." },
-        { title: "Extensions", desc: "Construction d'extensions, vérandas et agrandissements en maçonnerie traditionnelle." },
-        { title: "Escaliers extérieurs", desc: "Réalisation d'escaliers en béton, pierre ou reconstitué pour accès et terrasses." },
-        { title: "Réparations", desc: "Traitement des fissures, reprise de murs dégradés et consolidation de structures." },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>`,
+          title: "Murs & clôtures",
+          desc: "Construction de murs de clôture, murets décoratifs et piliers en parpaing, brique ou pierre naturelle. Vous délimitez votre terrain avec un ouvrage durable qui résiste aux intempéries pendant 50 ans minimum."
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/></svg>`,
+          title: "Extensions & surélévations",
+          desc: "Agrandissement de votre maison par extension latérale ou surélévation. Fondations, élévation des murs, création de linteaux et chaînages : vous gagnez jusqu'à 40 m² habitables sans déménager."
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/></svg>`,
+          title: "Fondations & dalles",
+          desc: "Coulage de fondations sur semelles filantes, dalles béton armé et radiers. Ferraillage conforme aux DTU, béton dosé à 350 kg/m³ minimum. Votre construction repose sur une base dimensionnée pour le terrain."
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>`,
+          title: "Murs de soutènement",
+          desc: "Ouvrages de retenue pour terrains en pente : murs en L, en T inversé ou gabions. Drainage périphérique et barbacanes intégrés pour évacuer la pression hydrostatique. Votre terrain est stabilisé durablement."
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5-6L16.5 15m0 0L12 10.5m4.5 4.5V1.5"/></svg>`,
+          title: "Escaliers extérieurs",
+          desc: "Réalisation d'escaliers en béton coffré, pierre reconstituée ou naturelle. Marches antidérapantes, paliers intermédiaires, garde-corps si nécessaire. Vous accédez à votre terrasse ou jardin en toute sécurité."
+        },
+        {
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1m0 0L11.42 4.97m-5.1 5.1H21m-10.58 5.1l5.1 5.1m0 0l-5.1-5.1m5.1 5.1H3"/></svg>`,
+          title: "Réparation & renforcement",
+          desc: "Traitement des fissures par injection de résine époxy, reprise en sous-œuvre, renforcement par fibres de carbone ou chaînage. Votre structure retrouve son intégrité structurelle sans démolition complète."
+        },
       ].map((item) => (
         <div class="card">
+          <div class="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-3" set:html={item.icon} />
           <h3 class="text-lg font-semibold text-primary mb-2">{item.title}</h3>
           <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
         </div>
       ))}
     </div>
   </Section>
+
+  <!-- ════════ SECTION 3 — Cas d'usage ════════ -->
+  <Section title="Vos projets de maçonnerie, nos solutions" bg="white">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" data-animate>
+      {[
+        {
+          title: "Vous construisez un mur de clôture pour sécuriser votre terrain",
+          desc: "Votre terrain n'est pas délimité ou l'ancienne clôture tombe en ruine ? Nous construisons un mur en parpaing enduit ou en pierre selon vos préférences, avec semelle de fondation adaptée au sol. Résultat : un ouvrage propre, droit et durable qui valorise votre propriété."
+        },
+        {
+          title: "Vous agrandissez votre maison sans déménager",
+          desc: "La famille s'agrandit et vous manquez d'espace ? Nous réalisons l'extension de plain-pied ou en surélévation : fondations, élévation des murs, linteaux, chaînages et dalle haute. Vous gagnez une chambre, un bureau ou un salon sans quitter votre logement."
+        },
+        {
+          title: "Votre mur de soutènement montre des signes de faiblesse",
+          desc: "Ventre dans le mur, fissures horizontales, terre qui pousse ? Un mur de soutènement défaillant peut céder brutalement. Nous intervenons pour conforter l'existant ou reconstruire un ouvrage dimensionné avec drainage et étanchéité intégrés."
+        },
+        {
+          title: "Des fissures apparaissent sur votre façade ou vos murs porteurs",
+          desc: "Fissures en escalier le long des joints, fissure traversante de part en part ? Nos maçons diagnostiquent l'origine (tassement différentiel, dilatation, surcharge) et traitent la cause avant de reprendre la maçonnerie. Pas de simple rebouchage cosmétique."
+        },
+      ].map((item) => (
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-accent/10 text-accent rounded-full flex items-center justify-center shrink-0 mt-1">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-dark mb-1">{item.title}</h3>
+            <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <a href="/contact" class="btn-primary">Décrivez-nous votre projet maçonnerie</a>
+    </div>
+  </Section>
+
+  <!-- ════════ SECTION 4 — Méthode (4 étapes) ════════ -->
+  <Section title="Comment se déroule un chantier de maçonnerie ?" subtitle="De la visite technique à la réception, voici les étapes concrètes de votre projet." bg="light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        {
+          num: "01",
+          title: "Visite & diagnostic",
+          desc: "Notre maçon se déplace sous 48h pour inspecter l'ouvrage existant ou le terrain. Il analyse la nature du sol, vérifie les contraintes du PLU et prend les mesures exactes."
+        },
+        {
+          num: "02",
+          title: "Devis détaillé & plans",
+          desc: "Vous recevez un devis ligne par ligne : terrassement, fondations, matériaux, main-d'œuvre. Si nécessaire, nous fournissons les plans pour la déclaration préalable ou le permis de construire."
+        },
+        {
+          num: "03",
+          title: "Travaux de maçonnerie",
+          desc: "Terrassement, implantation, coffrage, ferraillage, coulage béton, élévation des murs. Photos quotidiennes envoyées par WhatsApp. Le chantier est bâché en cas d'intempéries."
+        },
+        {
+          num: "04",
+          title: "Réception & garanties",
+          desc: "Inspection finale ensemble, vérification des niveaux et aplombs au laser. Vous recevez le PV de réception et le certificat de garantie décennale. Nettoyage complet du chantier inclus."
+        },
+      ].map((step) => (
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center text-lg font-bold mx-auto mb-4">{step.num}</div>
+          <h3 class="font-semibold text-gray-dark mb-2">{step.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- ════════ SECTION 5 — Confiance (6 cards + CTA) ════════ -->
+  <Section title="Pourquoi confier votre maçonnerie à Team Renov ?" bg="white">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" data-animate>
+      {[
+        {
+          title: "Maçons qualifiés depuis 10+ ans",
+          desc: "Nos maçons travaillent le parpaing, la brique, la pierre et le béton armé au quotidien. Chaque ouvrage respecte les DTU 20.1 (murs) et 13.12 (fondations)."
+        },
+        {
+          title: "Matériaux certifiés NF",
+          desc: "Parpaings Alkern ou Rector, ciment Lafarge ou Vicat, aciers de ferraillage conformes NF A 35-080. Pas de matériaux bas de gamme sur nos chantiers."
+        },
+        {
+          title: "Délais respectés à la semaine près",
+          desc: "Planning prévisionnel remis avant le démarrage. En cas de retard météo, vous êtes prévenu immédiatement avec un nouveau planning ajusté."
+        },
+        {
+          title: "Chantier propre et sécurisé",
+          desc: "Balisage des zones de travail, bennes à gravats évacuées régulièrement, nettoyage quotidien. Vos voisins ne subiront pas un chantier qui traîne."
+        },
+        {
+          title: "Un seul interlocuteur pour tout",
+          desc: "Besoin d'un drain, d'un enduit, d'un carrelage extérieur après la maçonnerie ? On coordonne tous les corps de métier. Un seul contrat, un seul planning."
+        },
+        {
+          title: "Devis transparent ligne par ligne",
+          desc: "Chaque poste est détaillé : volume de béton, nombre de parpaings, heures de main-d'œuvre, location d'engins. Aucun supplément non prévu au départ."
+        },
+      ].map((item) => (
+        <div class="card">
+          <h3 class="font-semibold text-primary mb-2">{item.title}</h3>
+          <p class="text-sm text-gray-medium leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10" data-animate>
+      <p class="text-gray-dark mb-4">Un projet de construction ou de réparation ? Obtenez votre devis gratuit.</p>
+      <a href="/contact" class="btn-primary">Demander un devis maçonnerie</a>
+    </div>
+  </Section>
+
+  <!-- ════════ SECTION 6 — FAQ SEO ════════ -->
+  <!-- FAQ schema à ajouter en JSON-LD -->
+  <Section title="Questions fréquentes sur la maçonnerie" bg="light">
+    <div class="max-w-3xl mx-auto space-y-0" data-animate>
+      <details>
+        <summary class="cursor-pointer font-semibold text-primary py-4 border-b border-gray-200">
+          Combien coûtent des travaux de maçonnerie ?
+        </summary>
+        <p class="text-gray-medium text-sm leading-relaxed pb-4">
+          Le prix dépend du type d'ouvrage, des matériaux et de l'accessibilité du chantier.
+          À titre indicatif : un mur de clôture en parpaing revient entre 80 et 150 €/m²,
+          une fondation en semelle filante entre 120 et 200 €/ml. Chaque projet étant unique,
+          nous établissons un devis sur mesure après visite du site. Contactez-nous pour un chiffrage précis.
+        </p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold text-primary py-4 border-b border-gray-200">
+          Combien de temps durent les travaux de maçonnerie ?
+        </summary>
+        <p class="text-gray-medium text-sm leading-relaxed pb-4">
+          Un mur de clôture de 20 ml se réalise en 5 à 7 jours ouvrés. Une extension de 20 m²
+          (fondations + élévation) prend 3 à 4 semaines. Le délai exact dépend de la complexité,
+          de la météo et des éventuels temps de séchage du béton (28 jours pour la résistance nominale).
+        </p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold text-primary py-4 border-b border-gray-200">
+          Faut-il un permis de construire pour des travaux de maçonnerie ?
+        </summary>
+        <p class="text-gray-medium text-sm leading-relaxed pb-4">
+          Un mur de moins de 2 m de hauteur ne nécessite généralement qu'une déclaration préalable.
+          Au-delà de 2 m ou pour une extension créant plus de 20 m² de surface de plancher,
+          un permis de construire est obligatoire. Nous vous accompagnons dans les démarches
+          administratives si besoin.
+        </p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold text-primary py-4 border-b border-gray-200">
+          Quelles garanties couvrent les travaux de maçonnerie ?
+        </summary>
+        <p class="text-gray-medium text-sm leading-relaxed pb-4">
+          Tous nos ouvrages de gros œuvre sont couverts par la garantie décennale (10 ans)
+          conformément à la loi Spinetta. S'y ajoutent la garantie de parfait achèvement (1 an)
+          et la garantie biennale sur les équipements dissociables (2 ans). Vous recevez
+          l'attestation d'assurance avant le démarrage du chantier.
+        </p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold text-primary py-4 border-b border-gray-200">
+          Peut-on construire en hiver ou par temps de pluie ?
+        </summary>
+        <p class="text-gray-medium text-sm leading-relaxed pb-4">
+          Le béton ne doit pas être coulé par gel (température inférieure à 5 °C) ni sous forte pluie.
+          En hiver, nous utilisons des adjuvants accélérateurs de prise et des bâches thermiques
+          pour protéger les ouvrages frais. Les travaux de maçonnerie sont possibles quasiment
+          toute l'année en Île-de-France avec ces précautions. Contactez-nous pour planifier votre chantier.
+        </p>
+      </details>
+    </div>
+  </Section>
+
+  <!-- ════════ SECTION 7 — Chiffres clés ════════ -->
+  <Section title="Team Renov en chiffres" bg="white">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center" data-animate>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">10+</p>
+        <p class="text-sm text-gray-medium mt-1">ans d'expérience en maçonnerie</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">200+</p>
+        <p class="text-sm text-gray-medium mt-1">ouvrages maçonnés réalisés</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">48h</p>
+        <p class="text-sm text-gray-medium mt-1">pour recevoir votre devis</p>
+      </div>
+      <div>
+        <p class="text-4xl font-extrabold text-accent">100%</p>
+        <p class="text-sm text-gray-medium mt-1">couvert par la décennale</p>
+      </div>
+    </div>
+  </Section>
+
 </ServicePageLayout>
